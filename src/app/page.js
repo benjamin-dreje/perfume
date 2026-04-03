@@ -1,66 +1,54 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import { useState } from "react";
+import "./page.css";
+import { perfumes } from "./lib/perfume";
+import PerfumeCard from "./components/Card"; // ייבוא הקומפוננטה
 
 export default function Home() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  // פונקציית עזר קטנה לסינון (נשארת פשוטה)
+  const filteredPerfumes =
+    selectedCategory === "All"
+      ? perfumes
+      : perfumes.filter((p) => p.category === selectedCategory);
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="pageWrapper" dir="rtl">
+      <h1 className="pageTitle"> Everyone deserves their own unique scent </h1>
+      <div className="flex justify-center gap-4 mb-10">
+        <button
+          onClick={() => setSelectedCategory("All")}
+          className="px-4 py-2 border rounded-md hover:bg-gray-100"
+        ></button>
+
+        <button
+          onClick={() => setSelectedCategory("Men")}
+          className="px-4 py-2 border rounded-md hover:bg-gray-100"
+        >
+          גברים 👨
+        </button>
+
+        <button
+          onClick={() => setSelectedCategory("Women")}
+          className="px-4 py-2 border rounded-md hover:bg-gray-100"
+        >
+          נשים 👩
+        </button>
+
+        <button
+          onClick={() => setSelectedCategory("Unisex")}
+          className="px-4 py-2 border rounded-md hover:bg-gray-100"
+        >
+          יוניסקס ✨
+        </button>
+      </div>
+
+      <div className="grid4">
+        {filteredPerfumes.map((perfume) => (
+          <PerfumeCard key={perfume.id} perfume={perfume} />
+        ))}
+      </div>
     </div>
   );
 }
