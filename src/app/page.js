@@ -16,29 +16,25 @@ export default function Home() {
   return (
     <div className="pageWrapper" dir="rtl">
       <h1 className="pageTitle"> Everyone deserves their own unique scent </h1>
-      <div className="flex justify-center gap-4 mb-10">
-        <button
+      <div className="containerBtns">
+        <button className="btn"
           onClick={() => setSelectedCategory("All")}
-          className="px-4 py-2 border rounded-md hover:bg-gray-100"
-        ></button>
+        >הכל</button>
 
-        <button
+        <button className="btn"
           onClick={() => setSelectedCategory("Men")}
-          className="px-4 py-2 border rounded-md hover:bg-gray-100"
         >
           גברים 👨
         </button>
 
-        <button
+        <button className="btn"
           onClick={() => setSelectedCategory("Women")}
-          className="px-4 py-2 border rounded-md hover:bg-gray-100"
         >
           נשים 👩
         </button>
 
-        <button
+        <button className="btn"
           onClick={() => setSelectedCategory("Unisex")}
-          className="px-4 py-2 border rounded-md hover:bg-gray-100"
         >
           יוניסקס ✨
         </button>
