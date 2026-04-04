@@ -1,10 +1,12 @@
+
+import "./card.css";
 export default function Card({ perfume }) {
 
-const { title, info, price , img } = perfume;
+const { title, info, price , image } = perfume;
 
   return (
     <div className="card">
-      <img src={img} alt={title ?? "Card image"} />
+      <img className="image" src={image} alt={title ?? "Card image"} />
       <div className="cardInfo">
         <h3 className="title">{title}</h3>
         <p className="info">{info}</p>
