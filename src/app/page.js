@@ -14,28 +14,22 @@ export default function Home() {
       : perfumes.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="pageWrapper" dir="rtl">
+    <div className="pageWrapper">
       <h1 className="pageTitle"> Everyone deserves their own unique scent </h1>
       <div className="containerBtns">
-        <button className="btn"
-          onClick={() => setSelectedCategory("All")}
-        >הכל</button>
+        <button className="btn" onClick={() => setSelectedCategory("All")}>
+          הכל
+        </button>
 
-        <button className="btn"
-          onClick={() => setSelectedCategory("Men")}
-        >
+        <button className="btn" onClick={() => setSelectedCategory("Men")}>
           גברים 👨
         </button>
 
-        <button className="btn"
-          onClick={() => setSelectedCategory("Women")}
-        >
+        <button className="btn" onClick={() => setSelectedCategory("Women")}>
           נשים 👩
         </button>
 
-        <button className="btn"
-          onClick={() => setSelectedCategory("Unisex")}
-        >
+        <button className="btn" onClick={() => setSelectedCategory("Unisex")}>
           יוניסקס ✨
         </button>
       </div>
