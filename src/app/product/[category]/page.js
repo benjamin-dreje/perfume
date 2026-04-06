@@ -29,11 +29,8 @@ export default function CategoryPage({ params }) {
     <div className="pageWrapper" dir="rtl">
       <h1 className="pageTitle">{title}</h1>
 
-      
-      // הצגת כפתורים רק אם הקטגוריה היא הכל
       {category.toLowerCase() === "all" && (
         <div className="containerBtns">
-          {/* הכפתורים עכשיו מעדכנים את ה-State והסינון קורה מיד */}
           <button className="btn" onClick={() => setSelectedCategory("all")}>
             הכל
           </button>

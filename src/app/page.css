@@ -62,26 +62,62 @@
 /* וודא שהשם של ה-class ב-HTML הוא categorySection */
 
 .categorySection .card {
-    width: 300px;
-    height: 350px;
-    border: 1px solid black;
-    border-style: none;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 300px;
+  height: 350px;
+  border: 1px solid black;
+  border-style: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  
 }
 
-
 .categorySection img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .cardLink {
   text-decoration: none; /* מבטל קו תחתון */
-  color: inherit;        /* גורם לטקסט לרשת את הצבע שהגדרת ב-card (למשל שחור) */
-  display: block;        /* חשוב! גורם ללינק לתפוס את כל שטח הכרטיס */
+  color: inherit; /* גורם לטקסט לרשת את הצבע שהגדרת ב-card (למשל שחור) */
+  display: block; /* חשוב! גורם ללינק לתפוס את כל שטח הכרטיס */
   width: 100%;
   height: 100%;
+}
+/* עיצוב ספציפי לכרטיס האחרון */
+.all-perfumes-card {
+  background: #8b5a8e; /* הצבע הסגול של המותג שלך */
+  display: flex;
+  align-items: center; /* מרכוז אנכי */
+  justify-content: center; /* מרכוז אופקי */
+  text-align: center;
+  border: none; /* אפשר להוריד את הגבול אם רוצים מראה אטום */
+  
+}
+
+/* מוודא שהלינק והדיב הפנימי תופסים את כל הגובה כדי שהמרכוז יעבוד */
+.all-perfumes-card .cardLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* עיצוב הטקסט בתוך הכרטיס הסגול */
+.all-perfumes-card .cardContent h2 {
+  color: #ffffff; /* טקסט לבן בולט על הסגול */
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.all-perfumes-card .cardContent p {
+  color: rgba(255, 255, 255, 0.9); /* לבן מעט שקוף לפסקה */
+}
+
+/* אפקט Hover לכרטיס הסגול */
+.all-perfumes-card:hover {
+  background: #6b3d6b; /* סגול כהה יותר ב-hover */
+  transform: translateY(-10px);
 }

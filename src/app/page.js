@@ -37,9 +37,9 @@ export default function Home() {
             </Link>
           </article>
 
-            <article className="card">
-            <Link href="/product/men" className="cardLink">
-              <img src="/menCategory.jpg" alt="Men's Perfume" />
+          <article className="card">
+            <Link href="/product/women" className="cardLink">
+              <img src="/womenCategory.jpg" alt="Women's Perfume" />
               <div className="cardContent">
                 <h2>Women's Perfume</h2>
                 <p>Discover our elite collection for women</p>
@@ -47,9 +47,9 @@ export default function Home() {
             </Link>
           </article>
 
-            <article className="card">
-            <Link href="/product/men" className="cardLink">
-              <img src="/menCategory.jpg" alt="Men's Perfume" />
+          <article className="card">
+            <Link href="/product/unisex" className="cardLink">
+              <img src="/UnisexCategory.jpg" alt="Unisex Perfume" />
               <div className="cardContent">
                 <h2>Unisex Perfume</h2>
                 <p>Discover our elite collection for everyone</p>
@@ -57,9 +57,8 @@ export default function Home() {
             </Link>
           </article>
 
-            <article className="card">
-            <Link href="/product/men" className="cardLink">
-              <img src="/menCategory.jpg" alt="Men's Perfume" />
+          <article className="card all-perfumes-card">
+            <Link href="/product/all" className="cardLink">
               <div className="cardContent">
                 <h2>All Perfume</h2>
                 <p>Discover our elite collection for everyone</p>
