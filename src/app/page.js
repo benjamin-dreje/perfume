@@ -52,7 +52,7 @@ export default function Home() {
 
           <article className="card">
             <Link href="/product/unisex" className="cardLink">
-              <img src="/UnisexCategory.jpg" alt="Unisex Perfume" />
+              <img src="/unisex.jpg" alt="Unisex Perfume" />
               <div className="cardContent">
                 <h3>Unisex Perfume</h3>
                 <p>Discover our collection for uinisex</p>
