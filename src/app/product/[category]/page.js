@@ -4,13 +4,14 @@ import { perfumes } from "../../lib/perfume";
 import PerfumeCard from "../../components/Card";
 import "../../pageCategory.css";
 
+// פרמטר הקטגוריה מגיע מהנתיב (URL) - לדוגמה: /product/men ולינק יובל הוא <Link href="/product/men">גברים</Link>
 export default function CategoryPage({ params }) {
   const { category } = use(params);
 
-  // 1. ה-State מתחיל לפי מה שכתוב ב-URL (הופכים לאות גדולה לתצוגה יפה)
+  // 1. ה-State החדש לשמירת הקטגוריה הנבחרת
   const [selectedCategory, setSelectedCategory] = useState(category);
 
-  // 2. לוגיקת הסינון משתמשת ב-State
+  // לוגיקת סינון הבשמים לפי הקטגוריה הנבחרת
   const filteredPerfumes =
     selectedCategory.toLowerCase() === "all"
       ? perfumes
@@ -18,6 +19,7 @@ export default function CategoryPage({ params }) {
           (p) => p.category.toLowerCase() === selectedCategory.toLowerCase(),
         );
 
+  // בחירת הכותרת המתאימה לפי הקטגוריה הנבחרת
   const title =
     selectedCategory.toLowerCase() === "all"
       ? "כל הבשמים שלנו"
@@ -27,6 +29,8 @@ export default function CategoryPage({ params }) {
     <div className="pageWrapper" dir="rtl">
       <h1 className="pageTitle">{title}</h1>
 
+      
+      // הצגת כפתורים רק אם הקטגוריה היא הכל
       {category.toLowerCase() === "all" && (
         <div className="containerBtns">
           {/* הכפתורים עכשיו מעדכנים את ה-State והסינון קורה מיד */}
@@ -44,7 +48,6 @@ export default function CategoryPage({ params }) {
           </button>
         </div>
       )}
-
       <div className="grid4">
         {filteredPerfumes.length > 0 ? (
           filteredPerfumes.map((perfume) => (
