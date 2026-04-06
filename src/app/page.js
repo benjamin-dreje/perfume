@@ -1,8 +1,28 @@
+
+import "./page.css";
+
 export default function Home() {
   return (
     <main>
       <section className="heroSection">
         <div className="containerHome">
+          {/* <div className="homeText">
+            <div className="info">
+              <h1>Everyone Deserves Their Own Signature Scent</h1>
+              <p>
+                "We believe a fragrance is more than just a scent—it’s a
+                personal signature. Discover a curated collection of rare
+                fragrances, carefully selected to express who you truly are."
+              </p>
+            </div>
+            <div className="homeBtns">
+              <button>Shop Now</button>
+            </div>
+          </div> */}
+
+          <div className="homeImage">
+            <img src="/heroImage.png" alt="Perfume" />
+          </div>
           <div className="homeText">
             <div className="info">
               <h1>Everyone Deserves Their Own Signature Scent</h1>
@@ -15,10 +35,6 @@ export default function Home() {
             <div className="homeBtns">
               <button>Shop Now</button>
             </div>
-          </div>
-
-          <div className="homeImage">
-            <img src="/heroImage.png" alt="Perfume" />
           </div>
         </div>
       </section>
