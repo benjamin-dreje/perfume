@@ -26,13 +26,17 @@ export default function Home() {
       </section>
 
       <section className="categorySection">
+        <div className="title">
+            <h3 className="titleH">Explore Our Categories</h3>
+          </div>
         <div className="cardContainer">
+          
           <article className="card">
             <Link href="/product/men" className="cardLink">
               <img src="/menCategory.jpg" alt="Men's Perfume" />
               <div className="cardContent">
-                <h2>Men's Perfume</h2>
-                <p>Discover our elite collection for men</p>
+                <h3>Men's Perfume</h3>
+                <p>Discover our  collection for men</p>
               </div>
             </Link>
           </article>
@@ -41,8 +45,8 @@ export default function Home() {
             <Link href="/product/women" className="cardLink">
               <img src="/womenCategory.jpg" alt="Women's Perfume" />
               <div className="cardContent">
-                <h2>Women's Perfume</h2>
-                <p>Discover our elite collection for women</p>
+                <h3>Women's Perfume</h3>
+                <p>Discover our  collection for women</p>
               </div>
             </Link>
           </article>
@@ -51,8 +55,8 @@ export default function Home() {
             <Link href="/product/unisex" className="cardLink">
               <img src="/UnisexCategory.jpg" alt="Unisex Perfume" />
               <div className="cardContent">
-                <h2>Unisex Perfume</h2>
-                <p>Discover our elite collection for everyone</p>
+                <h3>Unisex Perfume</h3>
+                <p>Discover our  collection for everyone</p>
               </div>
             </Link>
           </article>
@@ -61,7 +65,7 @@ export default function Home() {
             <Link href="/product/all" className="cardLink">
               <div className="cardContent">
                 <h2>All Perfume</h2>
-                <p>Discover our elite collection for everyone</p>
+                <p>Discover our  collection for everyone</p>
               </div>
             </Link>
           </article>

@@ -28,7 +28,6 @@ section.heroSection {
 .homeText h1 {
   font-size: 3rem;
   margin-bottom: 4px;
-  
 }
 
 .homeText p {
@@ -36,14 +35,13 @@ section.heroSection {
   color: rgba(68, 63, 63, 0.897);
 }
 
-
-.homeText .homeBtns button{
+.homeText .homeBtns button {
   background-color: #6b3d6b;
-  padding: 8px 16px ;
+  padding: 8px 16px;
   border-style: none;
-color: white;
-border-radius: 4px;
-font-size: 1.1rem;
+  color: white;
+  border-radius: 4px;
+  font-size: 1.1rem;
 }
 
 /* SECTION CATEGORIES */
@@ -105,4 +103,10 @@ font-size: 1.1rem;
 .all-perfumes-card:hover {
   background: #6b3d6b;
   transform: translateY(-10px);
+}
+.cardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
