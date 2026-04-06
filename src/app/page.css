@@ -39,6 +39,10 @@
  
 }
 
+.homeText p{
+    width: 480px;
+}
+
 .homeBtns button{
     background-color: #8b5a8e;
     padding: 16px 8px;
