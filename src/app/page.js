@@ -55,7 +55,7 @@ export default function Home() {
               <img src="/UnisexCategory.jpg" alt="Unisex Perfume" />
               <div className="cardContent">
                 <h3>Unisex Perfume</h3>
-                <p>Discover our collection for everyone</p>
+                <p>Discover our collection for uinisex</p>
               </div>
             </Link>
           </article>
