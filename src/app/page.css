@@ -1,61 +1,49 @@
+section.heroSection {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
 .containerHome {
-  position: relative;
-  width: 100%;
-  height: 500px;
+  display: flex;
+  flex-direction: row-reverse;
+  /* align-content: center; */
+  width: 80%;
+  align-items: center;
+  justify-content: space-around;
 }
-
-.homeImage {
-  width: 100%;
-  height: 100%;
-}
-
 .homeImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: right center;
+  width: 700px;
+  /* margin-left: -100px; */
 }
 
 .homeText {
-  position: absolute;
-  top: 50%;
-  left: 4%;
-  width: 40%;
-  transform: translate(0, -50%);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 250px;
-  z-index: 2;
+  width: 40%;
+  height: 300px;
 }
 
 .homeText h1 {
-  color: #1a1a1a;
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 4px;
+  
 }
 
 .homeText p {
-  width: 480px;
-  font-size: 1.2em;
+  font-size: 1.25rem;
+  color: rgba(68, 63, 63, 0.897);
 }
 
-.homeBtns button {
-  background-color: #8b5a8e;
-  padding: 16px 8px;
-  padding: 10px;
-  color: #fff;
-  border-style: none;
-  border-radius: 4px;
-}
-.homeBtns button:hover {
-  padding: 16px 8px;
-  padding: 10px;
-  color: #fff;
-  border-style: none;
-  border-radius: 4px;
+
+.homeText .homeBtns button{
   background-color: #6b3d6b;
-  cursor: pointer;
+  padding: 8px 16px ;
+  border-style: none;
+color: white;
+border-radius: 4px;
+font-size: 1.1rem;
 }
 
 /* SECTION CATEGORIES */
@@ -69,7 +57,6 @@
   border-radius: 16px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  
 }
 
 .categorySection img {
@@ -79,21 +66,20 @@
 }
 
 .cardLink {
-  text-decoration: none; /* מבטל קו תחתון */
-  color: inherit; /* גורם לטקסט לרשת את הצבע שהגדרת ב-card (למשל שחור) */
+  text-decoration: none;
+  color: black;
   display: block; /* חשוב! גורם ללינק לתפוס את כל שטח הכרטיס */
   width: 100%;
   height: 100%;
 }
 /* עיצוב ספציפי לכרטיס האחרון */
 .all-perfumes-card {
-  background: #8b5a8e; /* הצבע הסגול של המותג שלך */
+  background: #8b5a8e;
   display: flex;
-  align-items: center; /* מרכוז אנכי */
-  justify-content: center; /* מרכוז אופקי */
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  border: none; /* אפשר להוריד את הגבול אם רוצים מראה אטום */
-  
+  border: none;
 }
 
 /* מוודא שהלינק והדיב הפנימי תופסים את כל הגובה כדי שהמרכוז יעבוד */
@@ -105,19 +91,18 @@
   height: 100%;
 }
 
-/* עיצוב הטקסט בתוך הכרטיס הסגול */
 .all-perfumes-card .cardContent h2 {
-  color: #ffffff; /* טקסט לבן בולט על הסגול */
+  color: #ffffff;
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
 .all-perfumes-card .cardContent p {
-  color: rgba(255, 255, 255, 0.9); /* לבן מעט שקוף לפסקה */
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* אפקט Hover לכרטיס הסגול */
 .all-perfumes-card:hover {
-  background: #6b3d6b; /* סגול כהה יותר ב-hover */
+  background: #6b3d6b;
   transform: translateY(-10px);
 }

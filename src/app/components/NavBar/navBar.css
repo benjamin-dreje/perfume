@@ -38,3 +38,8 @@ nav ul li a:hover {
   font-size: 1.1rem;
   color: #8b5a8e;
 }
+@media(max-width:768px){
+  .navList{
+    display: none;
+  }
+}
