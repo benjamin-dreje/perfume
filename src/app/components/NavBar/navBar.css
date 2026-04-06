@@ -1,8 +1,27 @@
-.header {
+/* .header {
   box-shadow:
     rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
     rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
   margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+
+}
+  */
+.header {
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  box-shadow:
+    0 0 5px #0000001a,
+    0 0 1px #0000001a;
+  width: 95%;
+  margin: auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2); /* לבן שקוף ב-20% */
+  backdrop-filter: blur(10px); /* הטשטוש המפורסם */
+  -webkit-backdrop-filter: blur(10px); /* תמיכה לדפדפני ספארי */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* מסגרת עדינה שנותנת עומק */
 }
 
 nav {
@@ -38,8 +57,8 @@ nav ul li a:hover {
   font-size: 1.1rem;
   color: #8b5a8e;
 }
-@media(max-width:768px){
-  .navList{
+@media (max-width: 768px) {
+  .navList {
     display: none;
   }
 }

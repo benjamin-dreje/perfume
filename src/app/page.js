@@ -27,16 +27,15 @@ export default function Home() {
 
       <section className="categorySection">
         <div className="title">
-            <h3 className="titleH">Explore Our Categories</h3>
-          </div>
+          <h3 className="titleH">Explore Our Categories</h3>
+        </div>
         <div className="cardContainer">
-          
           <article className="card">
             <Link href="/product/men" className="cardLink">
               <img src="/menCategory.jpg" alt="Men's Perfume" />
               <div className="cardContent">
                 <h3>Men's Perfume</h3>
-                <p>Discover our  collection for men</p>
+                <p>Discover our collection for men</p>
               </div>
             </Link>
           </article>
@@ -46,7 +45,7 @@ export default function Home() {
               <img src="/womenCategory.jpg" alt="Women's Perfume" />
               <div className="cardContent">
                 <h3>Women's Perfume</h3>
-                <p>Discover our  collection for women</p>
+                <p>Discover our collection for women</p>
               </div>
             </Link>
           </article>
@@ -56,7 +55,7 @@ export default function Home() {
               <img src="/UnisexCategory.jpg" alt="Unisex Perfume" />
               <div className="cardContent">
                 <h3>Unisex Perfume</h3>
-                <p>Discover our  collection for everyone</p>
+                <p>Discover our collection for everyone</p>
               </div>
             </Link>
           </article>
@@ -65,7 +64,7 @@ export default function Home() {
             <Link href="/product/all" className="cardLink">
               <div className="cardContent">
                 <h2>All Perfume</h2>
-                <p>Discover our  collection for everyone</p>
+                <p>Discover our collection for everyone</p>
               </div>
             </Link>
           </article>
