@@ -30,6 +30,7 @@ nav {
   align-items: baseline;
   justify-content: center;
   align-content: center;
+  color: #6b3d6b;
 }
 nav ul {
   gap: 1.5rem;
