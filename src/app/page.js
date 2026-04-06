@@ -1,25 +1,11 @@
-
 import "./page.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
       <section className="heroSection">
         <div className="containerHome">
-          {/* <div className="homeText">
-            <div className="info">
-              <h1>Everyone Deserves Their Own Signature Scent</h1>
-              <p>
-                "We believe a fragrance is more than just a scent—it’s a
-                personal signature. Discover a curated collection of rare
-                fragrances, carefully selected to express who you truly are."
-              </p>
-            </div>
-            <div className="homeBtns">
-              <button>Shop Now</button>
-            </div>
-          </div> */}
-
           <div className="homeImage">
             <img src="/heroImage.png" alt="Perfume" />
           </div>
@@ -40,18 +26,45 @@ export default function Home() {
       </section>
 
       <section className="categorySection">
-        <h2>הקטגוריות שלנו</h2>
-        <div className="cards-container">
-          <article>
-            <h3>מוצרי חשמל</h3>
-            <p>כל המכשירים הכי מתקדמים לבית שלכם.</p>
-            <a href="/electronics">לצפייה בקטגוריה</a>
+        <div className="cardContainer">
+          <article className="card">
+            <Link href="/product/men" className="cardLink">
+              <img src="/menCategory.jpg" alt="Men's Perfume" />
+              <div className="cardContent">
+                <h2>Men's Perfume</h2>
+                <p>Discover our elite collection for men</p>
+              </div>
+            </Link>
           </article>
 
-          <article>
-            <h3>ריהוט לגן</h3>
-            <p>מגוון רחב של פינות ישיבה מעץ מלא.</p>
-            <a href="/garden">לצפייה בקטגוריה</a>
+            <article className="card">
+            <Link href="/product/men" className="cardLink">
+              <img src="/menCategory.jpg" alt="Men's Perfume" />
+              <div className="cardContent">
+                <h2>Women's Perfume</h2>
+                <p>Discover our elite collection for women</p>
+              </div>
+            </Link>
+          </article>
+
+            <article className="card">
+            <Link href="/product/men" className="cardLink">
+              <img src="/menCategory.jpg" alt="Men's Perfume" />
+              <div className="cardContent">
+                <h2>Unisex Perfume</h2>
+                <p>Discover our elite collection for everyone</p>
+              </div>
+            </Link>
+          </article>
+
+            <article className="card">
+            <Link href="/product/men" className="cardLink">
+              <img src="/menCategory.jpg" alt="Men's Perfume" />
+              <div className="cardContent">
+                <h2>All Perfume</h2>
+                <p>Discover our elite collection for everyone</p>
+              </div>
+            </Link>
           </article>
         </div>
       </section>

@@ -1,63 +1,87 @@
 .containerHome {
   position: relative;
   width: 100%;
-  height: 500px; 
+  height: 500px;
 }
 
 .homeImage {
   width: 100%;
   height: 100%;
- 
 }
 
 .homeImage img {
   width: 100%;
   height: 100%;
-  object-fit:contain;
+  object-fit: contain;
   object-position: right center;
 }
 
 .homeText {
   position: absolute;
   top: 50%;
-  left: 4%; 
-  width: 40%; 
-  transform: translate(0, -50%); 
-  text-align: left;
-  direction: ltr;
+  left: 4%;
+  width: 40%;
+  transform: translate(0, -50%);
   display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 250px;
-    z-index: 2;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 250px;
+  z-index: 2;
 }
 
 .homeText h1 {
   color: #1a1a1a;
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 20px;
- 
 }
 
-.homeText p{
-    width: 480px;
+.homeText p {
+  width: 480px;
+  font-size: 1.2em;
 }
 
-.homeBtns button{
-    background-color: #8b5a8e;
-    padding: 16px 8px;
-    padding: 10px;
-    color: #fff;
-    border-style: none;
-    border-radius: 4px;
-   
+.homeBtns button {
+  background-color: #8b5a8e;
+  padding: 16px 8px;
+  padding: 10px;
+  color: #fff;
+  border-style: none;
+  border-radius: 4px;
 }
-.homeBtns button:hover{
-    padding: 16px 8px;
-    padding: 10px;
-    color: #fff;
+.homeBtns button:hover {
+  padding: 16px 8px;
+  padding: 10px;
+  color: #fff;
+  border-style: none;
+  border-radius: 4px;
+  background-color: #6b3d6b;
+  cursor: pointer;
+}
+
+/* SECTION CATEGORIES */
+/* וודא שהשם של ה-class ב-HTML הוא categorySection */
+
+.categorySection .card {
+    width: 300px;
+    height: 350px;
+    border: 1px solid black;
     border-style: none;
-    border-radius: 4px;
-    background-color: #6b3d6b;
-   cursor: pointer;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+.categorySection img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.cardLink {
+  text-decoration: none; /* מבטל קו תחתון */
+  color: inherit;        /* גורם לטקסט לרשת את הצבע שהגדרת ב-card (למשל שחור) */
+  display: block;        /* חשוב! גורם ללינק לתפוס את כל שטח הכרטיס */
+  width: 100%;
+  height: 100%;
 }
