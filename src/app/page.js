@@ -63,7 +63,7 @@ export default function Home() {
           <article className="card all-perfumes-card">
             <Link href="/product/all" className="cardLink">
               <div className="cardContent">
-                <h2>All Perfume</h2>
+                <h2>All Perfumes</h2>
                 <p>Discover our collection for everyone</p>
               </div>
             </Link>

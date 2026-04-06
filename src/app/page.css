@@ -27,12 +27,12 @@ section.heroSection {
 }
 
 .homeText h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 4px;
 }
 
 .homeText p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: rgba(68, 63, 63, 0.897);
 }
 
@@ -70,7 +70,7 @@ section.heroSection {
 
 .categorySection img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -80,6 +80,11 @@ section.heroSection {
   display: block; /* חשוב! גורם ללינק לתפוס את כל שטח הכרטיס */
   width: 100%;
   height: 100%;
+}
+
+.cardContent h3,
+p {
+  padding: 5px 10px;
 }
 /* עיצוב ספציפי לכרטיס האחרון */
 .all-perfumes-card {
