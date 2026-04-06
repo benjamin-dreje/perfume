@@ -22,11 +22,11 @@ export default function CategoryPage({ params }) {
   // בחירת הכותרת המתאימה לפי הקטגוריה הנבחרת
   const title =
     selectedCategory.toLowerCase() === "all"
-      ? "כל הבשמים שלנו"
-      : `קטגוריה: ${selectedCategory}`;
+      ? "Discover All Our Perfumes"
+      : `Category: ${selectedCategory}`;
 
   return (
-    <div className="pageWrapper" dir="rtl">
+    <div className="pageWrapper">
       <h1 className="pageTitle">{title}</h1>
 
       {category.toLowerCase() === "all" && (
