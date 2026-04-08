@@ -14,7 +14,7 @@ export default function Card({ perfume }) {
         <h3 className="title">{title}</h3>
         <p className="info">{info}</p>
         {/* שימוש ב-span או div למחיר כדי למנוע מרג'ינים של h2 */}
-        <div className="price">{price}</div>
+        <div className="price">${price}</div>
       </div>
 
       <div className="cardButton">
