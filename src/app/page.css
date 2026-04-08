@@ -146,7 +146,7 @@ section.heroSection {
 */
 .title {
   align-items: center;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 .title .titleH {
   display: flex;
@@ -192,9 +192,9 @@ section.heroSection {
     text-align: center;
     justify-content: center;
     margin-bottom: 20px;
-    /* padding: 20px; */
     font-size: 1.5rem;
     display: flex;
+    margin-top: 20px;
   }
   .cardContainer {
     justify-content: center;
@@ -209,5 +209,8 @@ section.heroSection {
   }
   .homeImage img {
     width: 300px;
+  }
+  header {
+    margin-bottom: 20px;
   }
 }
