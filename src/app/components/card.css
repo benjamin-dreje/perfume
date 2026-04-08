@@ -37,25 +37,26 @@
   flex-direction: column;
 }
 
-.title {
+.cardInfo .title {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 8px;
   color: #333;
 }
 
-.info {
+.cardInfo .info {
   color: #666;
   font-size: 0.9rem;
   margin-bottom: 12px;
   line-height: 1.4;
 }
 
-.price {
+.cardInfo .price {
   font-size: 1.1rem;
   font-weight: bold;
   color: #8b5a8e;
   margin-bottom: 16px;
+  margin-top: auto;
 }
 
 .cardButton {
