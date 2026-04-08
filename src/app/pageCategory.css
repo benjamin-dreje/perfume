@@ -10,7 +10,7 @@
   gap: 24px;
   width: 100%;
   justify-items: center;
-  align-items: stretch;
+  /* align-items: stretch; */
   justify-content: center;
 }
 

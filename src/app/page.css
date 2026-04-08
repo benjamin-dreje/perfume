@@ -82,8 +82,10 @@ section.heroSection {
   height: 100%;
 }
 
-.cardContent h3
- {
+.cardContent h3 {
+  padding: 5px 10px;
+}
+.cardContent p {
   padding: 5px 10px;
 }
 /* עיצוב ספציפי לכרטיס האחרון */

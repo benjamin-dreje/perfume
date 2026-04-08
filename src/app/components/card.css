@@ -21,7 +21,6 @@
   height: 200px; /* הגובה שאתה רוצה */
   background-color: #f0f0f0; /* צבע אפור שמונע חלל ריק בטעינה */
   overflow: hidden;
-  flex-shrink: 0; /* מונע מהתמונה להתכווץ כשהכרטיס גדל */
 }
 .image {
   width: 100%;
