@@ -36,7 +36,7 @@ button.btn {
   align-items: center;
   justify-content: center;
   align-content: center;
-  border-radius: 20px;
+  border-radius: 4px;
   transition: 0.5s ease;
 }
 
@@ -53,10 +53,10 @@ button.btn:hover {
   align-items: center;
   justify-content: center;
   align-content: center;
-  border-radius: 20px;
+  border-radius: 12px;
   color: white;
   font-size: medium;
-  font-weight: 600;
+  font-weight: 500px;
 }
 
 @media (max-width: 1024px) {
