@@ -162,7 +162,7 @@ section.heroSection {
     justify-content: center;
     align-content: center;
     align-items: center;
-    height: 500px;
+    /* height: 500px; */
   }
   .containerHome {
     flex-direction: column-reverse;
@@ -170,6 +170,7 @@ section.heroSection {
     align-items: center;
     width: 80%;
     display: flex;
+    height: 580px;
   }
   .homeImage {
     /* display: flex; */
