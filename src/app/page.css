@@ -175,11 +175,12 @@ section.heroSection {
   }
   .homeText {
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
-    height: 300px;
+    /* height: 400px; */
+    margin-top: 50px;
     display: flex;
-    margin-top: 80px;
+    gap: 15px;
   }
   .title .titleH {
     justify-content: center;
