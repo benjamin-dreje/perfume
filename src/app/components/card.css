@@ -6,6 +6,9 @@
     transform 0.3s ease,
     box-shadow 0.3s ease;
   max-width: 300px;
+  display: flex; /* הוספה */
+  flex-direction: column; /* הוספה */
+  height: 100%;
 }
 
 .card:hover {
@@ -13,15 +16,25 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
-
+.imageWrapper {
+  width: 100%;
+  height: 200px; /* הגובה שאתה רוצה */
+  background-color: #f0f0f0; /* צבע אפור שמונע חלל ריק בטעינה */
+  overflow: hidden;
+  flex-shrink: 0; /* מונע מהתמונה להתכווץ כשהכרטיס גדל */
+}
 .image {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
+  background-color: #f0f0f0;
 }
 
 .cardInfo {
   padding: 16px;
+  flex-grow: 1; /* הוספה - זה ידחוף את הכפתורים למטה */
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
