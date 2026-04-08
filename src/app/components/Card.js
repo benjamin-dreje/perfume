@@ -1,8 +1,6 @@
-
 import "./card.css";
 export default function Card({ perfume }) {
-
-const { title, info, price , image } = perfume;
+  const { title, info, price, image } = perfume;
 
   return (
     <div className="card">

@@ -1,13 +1,15 @@
 // src/lib/perfumes.js
 
+// src/lib/perfumes.js
+
 export const perfumes = [
-  // --- גברים ---
+  // --- Men ---
   {
     id: 1,
     title: "Dior Sauvage",
     category: "Men",
     image: "/perfume1.jpg",
-    info: "ניחוח עוצמתי ורענן עם תווים של ברגמוט ופלפל סיצ'ואן.",
+    info: "A powerful and fresh fragrance with notes of Bergamot and Sichuan Pepper.",
     price: 450,
     rating: 4.8,
   },
@@ -16,7 +18,7 @@ export const perfumes = [
     title: "Bleu de Chanel",
     category: "Men",
     image: "/perfume2.jpg",
-    info: "ניחוח עצי וארומטי המשלב הדרים, מנטה וארז.",
+    info: "A woody and aromatic scent combining Citrus, Mint, and Cedar.",
     price: 580,
     rating: 4.7,
   },
@@ -25,7 +27,7 @@ export const perfumes = [
     title: "Versace Eros",
     category: "Men",
     image: "/perfume3.jpg",
-    info: "ניחוח חושני הכולל מנטה, תפוח ירוק ווניל.",
+    info: "A sensual fragrance featuring Mint, Green Apple, and Vanilla.",
     price: 380,
     rating: 4.5,
   },
@@ -35,7 +37,7 @@ export const perfumes = [
     category: "Men",
     image:
       "https://www.armanibeauty.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-armani-master-catalog/default/dw9e7f4c5a/products/A001/A001_3605520551104_1.jpg",
-    info: "ניחוח ימי ורענן בהשראת הים התיכון. קליל ונעים.",
+    info: "A fresh marine scent inspired by the Mediterranean Sea. Light and pleasant.",
     price: 420,
     rating: 4.6,
   },
@@ -45,7 +47,7 @@ export const perfumes = [
     category: "Men",
     image:
       "https://www.jeanpaulgaultier.com/dw/image/v2/BDCH_PRD/on/demandware.static/-/Sites-jpg-master-catalog/default/dw7e5a6f2b/images/perfumes/LE-MALE/LE-MALE-EDT-125ML.jpg",
-    info: "ניחוח אוריינטלי עם לבנדר ווניל בבקבוק האייקוני.",
+    info: "An oriental fragrance with Lavender and Vanilla in the iconic bottle.",
     price: 390,
     rating: 4.4,
   },
@@ -55,19 +57,19 @@ export const perfumes = [
     category: "Men",
     image:
       "https://www.hermes.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-hermes-master-catalog/default/dw5b4c1f9a/product/fragrance/terre-d-hermes-eau-de-toilette/01.jpg",
-    info: "ניחוח אדמתי ועצי עם תווים של תפוז וצור.",
+    info: "An earthy and woody fragrance with notes of Orange and Flint.",
     price: 520,
     rating: 4.8,
   },
 
-  // --- נשים ---
+  // --- Women ---
   {
     id: 7,
     title: "Chanel Coco Mademoiselle",
     category: "Women",
     image:
       "https://www.chanel.com/images/t_one/t_fragrance//q_auto,f_auto,fl_lossy,dpr_2/coco-mademoiselle-eau-de-parfum-spray-100ml.jpg",
-    info: "ניחוח פרחוני ואוריינטלי המשלב תפוז, יסמין וורד.",
+    info: "A floral and oriental scent combining Orange, Jasmine, and Rose.",
     price: 620,
     rating: 4.9,
   },
@@ -77,7 +79,7 @@ export const perfumes = [
     category: "Women",
     image:
       "https://www.yslbeauty.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-ysl-master-catalog/default/dw4f1b3e5a/products/3614272648418/3614272648418_1.jpg",
-    info: "שילוב נועז של לבנדר מצרפת ופריחת תפוז ממרוקו.",
+    info: "A bold combination of Lavender from France and Orange Blossom from Morocco.",
     price: 490,
     rating: 4.7,
   },
@@ -87,7 +89,7 @@ export const perfumes = [
     category: "Women",
     image:
       "https://www.dior.com/dw/image/v2/BBDM_PRD/on/demandware.static/-/Sites-master_dior/default/dw15053421/assets/Y0066227/Y0066227_E01.jpg",
-    info: "זר פרחים עשיר המשלב יסמין, ורד וילאנג-ילאנג.",
+    info: "A rich floral bouquet blending Jasmine, Rose, and Ylang-Ylang.",
     price: 550,
     rating: 4.8,
   },
@@ -97,7 +99,7 @@ export const perfumes = [
     category: "Women",
     image:
       "https://www.lancome.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-lancome-master-catalog/default/dw9e7f4c5a/products/A001/A001_3605532612690_1.jpg",
-    info: "ניחוח מתוק של איריס, יסמין ופצ'ולי.",
+    info: "A sweet fragrance featuring Iris, Jasmine, and Patchouli.",
     price: 430,
     rating: 4.6,
   },
@@ -107,7 +109,7 @@ export const perfumes = [
     category: "Women",
     image:
       "https://www.carolinaherrera.com/dw/image/v2/BDCH_PRD/on/demandware.static/-/Sites-ch-master-catalog/default/dw7e5a6f2b/images/fragrance/GOOD-GIRL/GOOD-GIRL-EDP-80ML.jpg",
-    info: "שילוב של פולי טונקה ויסמין בבקבוק נעל עקב.",
+    info: "A mix of Tonka Bean and Jasmine in the famous stiletto-shaped bottle.",
     price: 510,
     rating: 4.7,
   },
@@ -117,19 +119,19 @@ export const perfumes = [
     category: "Women",
     image:
       "https://www.gucci.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-gucci-master-catalog/default/dw5b4c1f9a/product/fragrance/gucci-flora-gorgeous-gardenia-100ml/01.jpg",
-    info: "ניחוח פרחוני עדין המבוסס על גרדניה ופרחי אגס.",
+    info: "A delicate floral scent based on Gardenia and Pear Blossom.",
     price: 480,
     rating: 4.5,
   },
 
-  // --- יוניסקס ---
+  // --- Unisex ---
   {
     id: 13,
     title: "Creed Aventus",
     category: "Unisex",
     image:
       "https://www.creedfragrance.com/dw/image/v2/BDCH_PRD/on/demandware.static/-/Sites-creed-master-catalog/default/dw7e5a6f2b/images/fragrance/AVENTUS/AVENTUS-100ML.jpg",
-    info: "בושם יוקרתי עם תווים של אננס, ברגמוט ומוסק.",
+    info: "A luxury perfume with notes of Pineapple, Bergamot, and Musk.",
     price: 1200,
     rating: 4.9,
   },
@@ -139,7 +141,7 @@ export const perfumes = [
     category: "Unisex",
     image:
       "https://www.franciskurkdjian.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-kurkdjian-master-catalog/default/dw5b4c1f9a/product/fragrance/baccarat-rouge-540-eau-de-parfum/01.jpg",
-    info: "ניחוח מתוחכם של זעפרן, יסמין וענבר.",
+    info: "A sophisticated fragrance of Saffron, Jasmine, and Amberwood.",
     price: 1450,
     rating: 5.0,
   },
@@ -149,7 +151,7 @@ export const perfumes = [
     category: "Unisex",
     image:
       "https://www.tomford.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-tomford-master-catalog/default/dw5b4c1f9a/product/fragrance/black-orchid-eau-de-parfum/01.jpg",
-    info: "ניחוח אפל ומסתורי של סחלב שחור ותבלינים.",
+    info: "A dark and mysterious scent of Black Orchid and rich spices.",
     price: 750,
     rating: 4.6,
   },
@@ -159,7 +161,7 @@ export const perfumes = [
     category: "Unisex",
     image:
       "https://www.byredo.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-byredo-master-catalog/default/dw5b4c1f9a/product/fragrance/gypsy-water-eau-de-parfum/01.jpg",
-    info: "ניחוח בוהמי המשלב לימון, פלפל וערער.",
+    info: "A bohemian fragrance combining Lemon, Pepper, and Juniper Berries.",
     price: 820,
     rating: 4.7,
   },
@@ -169,7 +171,7 @@ export const perfumes = [
     category: "Unisex",
     image:
       "https://www.lelabofragrances.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-lelabo-master-catalog/default/dw5b4c1f9a/product/fragrance/santal-33-eau-de-parfum/01.jpg",
-    info: "ניחוח עצי וקשוח של אלגום, עור וסיגליות.",
+    info: "A woody and rugged scent of Sandalwood, Leather, and Violet.",
     price: 950,
     rating: 4.9,
   },
@@ -179,7 +181,7 @@ export const perfumes = [
     category: "Unisex",
     image:
       "https://www.escentric.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-escentric-master-catalog/default/dw5b4c1f9a/product/fragrance/molecule-01/01.jpg",
-    info: "בושם מהפכני המורכב ממולקולה אחת בלבד המגיבה לריח הגוף.",
+    info: "A revolutionary fragrance consisting of a single molecule that reacts to body chemistry.",
     price: 490,
     rating: 4.8,
   },

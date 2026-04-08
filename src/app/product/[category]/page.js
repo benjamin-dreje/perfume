@@ -32,16 +32,16 @@ export default function CategoryPage({ params }) {
       {category.toLowerCase() === "all" && (
         <div className="containerBtns">
           <button className="btn" onClick={() => setSelectedCategory("all")}>
-            הכל
+            All Perfumes
           </button>
           <button className="btn" onClick={() => setSelectedCategory("Men")}>
-            גברים 👨
+            Men
           </button>
           <button className="btn" onClick={() => setSelectedCategory("Women")}>
-            נשים 👩
+            Women
           </button>
           <button className="btn" onClick={() => setSelectedCategory("Unisex")}>
-            יוניסקס ✨
+            Unisex
           </button>
         </div>
       )}
