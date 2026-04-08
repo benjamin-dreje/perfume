@@ -162,6 +162,7 @@ section.heroSection {
     justify-content: center;
     align-content: center;
     align-items: center;
+    height: 500px;
   }
   .containerHome {
     flex-direction: column-reverse;
@@ -188,12 +189,12 @@ section.heroSection {
     gap: 15px;
   }
   .title .titleH {
+    text-align: center;
     justify-content: center;
     margin-bottom: 20px;
-    font-size: 2rem;
+    /* padding: 20px; */
+    font-size: 1.5rem;
     display: flex;
-    text-align: center;
-    padding: 20px;
   }
   .cardContainer {
     justify-content: center;
