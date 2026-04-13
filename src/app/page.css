@@ -212,7 +212,8 @@ section.heroSection {
 
   .categorySection .card {
     width: 100%;
-    max-width: 100%; /* נותן להם להימתח לפי העמודה */
+    max-width: 100%; 
+    height: 250px;/* נותן להם להימתח לפי העמודה */
   }
   .homeImage {
     /* display: flex; */
@@ -226,6 +227,9 @@ section.heroSection {
   .cardContent p {
     display: none;
   }
+  .cardContent h3, .cardContent p {
+    padding: 5px 0;
+}
   .homeText {
     flex-direction: column;
     justify-content: space-around;
