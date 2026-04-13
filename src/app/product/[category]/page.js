@@ -51,7 +51,7 @@ export default function CategoryPage({ params }) {
             <PerfumeCard key={perfume.id} perfume={perfume} />
           ))
         ) : (
-          <p>לא נמצאו בשמים בקטגוריה זו.</p>
+          <p>No perfumes found in this category.</p>
         )}
       </div>
     </div>
