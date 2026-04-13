@@ -70,7 +70,7 @@ section.heroSection {
 
 .categorySection img {
   width: 100%;
-  height: 250px;
+  height: 270px;
   object-fit: cover;
 }
 
@@ -156,6 +156,34 @@ section.heroSection {
 }
 
 /* Mobile Responsive */
+
+@media (max-width: 1440px) {
+  .homeText {
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 300px;
+    display: flex;
+  }
+  .homeText {
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* width: 40%; */
+    height: 300px;
+    display: flex;
+    z-index: 8;
+  }
+  .containerHome {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    display: flex;
+  }
+  .homeImage img {
+    width: 500px;
+  }
+}
 @media (max-width: 768px) {
   section.heroSection {
     display: flex;
@@ -172,6 +200,20 @@ section.heroSection {
     display: flex;
     height: 580px;
   }
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* שתי עמודות שוות */
+    gap: 15px;
+    padding: 15px;
+    width: 100%;
+    justify-items: center;
+  }
+
+  .categorySection .card {
+    width: 100%;
+    max-width: 100%; /* נותן להם להימתח לפי העמודה */
+  }
   .homeImage {
     /* display: flex; */
     /* align-content: center; */
@@ -180,6 +222,9 @@ section.heroSection {
     width: 300px;
 
     z-index: -27;
+  }
+  .cardContent p {
+    display: none;
   }
   .homeText {
     flex-direction: column;
@@ -197,13 +242,7 @@ section.heroSection {
     display: flex;
     margin-top: 20px;
   }
-  .cardContainer {
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
-  }
+
   .homeText h1 {
     margin-bottom: 4px;
     font-size: 2rem;
