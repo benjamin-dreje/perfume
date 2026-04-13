@@ -73,7 +73,7 @@ button.btn:hover {
 
 @media (max-width: 480px) {
   .grid4 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .pageWrapper {
