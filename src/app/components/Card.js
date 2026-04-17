@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./card.css";
 
 export default function Card({ perfume }) {
@@ -19,7 +20,9 @@ export default function Card({ perfume }) {
 
       <div className="cardButton">
         <button className="add">Add</button>
-        <button className="details">Details</button>
+        <Link href={`/products/${perfume.id}`}>
+          <button className="details">Details</button>
+        </Link>
       </div>
     </div>
   );
