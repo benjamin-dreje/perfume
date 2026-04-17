@@ -1,6 +1,7 @@
 "use client";
 import { useState, use } from "react";
 import { perfumes } from "../../lib/perfume";
+import "../../productInfo.css";
 
 export default function ProductPage({ params }) {
   const { id } = use(params);
