@@ -1,8 +1,8 @@
 "use client";
 import { use, useState, useEffect } from "react"; // הוספנו useEffect
 import { perfumes } from "../../lib/perfume";
-import PerfumeCard from "../../components/Card";
-import "../../pageCategory.css";
+import PerfumeCard from "../../components/Card/Card";
+import "./pageCategory.css";
 
 // פרמטר הקטגוריה מגיע מהנתיב (URL) - לדוגמה: /product/men ולינק יובל הוא <Link href="/product/men">גברים</Link>
 export default function CategoryPage({ params }) {
