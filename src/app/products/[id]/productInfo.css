@@ -26,3 +26,26 @@ img.imageInfo {
   justify-content: space-evenly;
   width: 500px;
 }
+p.detailedInfo {
+  color: #4b4a4adb;
+}
+.sizeButtons {
+  display: flex;
+  gap: 20px;
+}
+.sizeButtons button {
+  width: 100px;
+  height: 30px;
+  border-style: none;
+  border-radius: 4px;
+}
+.sizeButtons button:hover {
+  cursor: pointer;
+  color: white;
+  font-weight: 600px;
+  background-color: #6b3d6b;
+}
+.activeSize {
+  color: white;
+  background-color: #6b3d6b;
+}
