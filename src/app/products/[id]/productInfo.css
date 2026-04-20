@@ -74,3 +74,41 @@ button.buyNowBtn:hover {
   cursor: pointer;
   transform: translateY(-2px);
 }
+.countPrice {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* רווח קבוע בין האלמנטים */
+}
+
+/* הכפתורים של הפלוס והמינוס */
+.countPrice button:not(.addToCartBtn) {
+  width: 35px; /* רווח קבוע */
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-style: none;
+}
+.countPrice button:hover {
+  background-color: rgba(128, 128, 128, 0.514);
+  color: white;
+}
+
+/* המספר שבאמצע - זה החלק הכי חשוב! */
+.qtyNumber {
+  display: inline-block;
+  min-width: 30px; /* מבטיח שהמספר תמיד יתפוס אותו מרחב, גם אם זה 1 וגם אם זה 10 */
+  text-align: center;
+  font-weight: bold;
+}
+
+.priceAndTotal {
+  display: flex;
+  flex-direction: column; /* או row, תלוי בעיצוב שלך */
+  gap: 15px;
+  min-height: 80px; /* שומר על גובה קבוע לכל הקונטיינר כדי שלא יקפוץ */
+}
+
+.addToCartBtn {
+}

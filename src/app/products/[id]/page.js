@@ -85,7 +85,7 @@ export default function ProductPage({ params }) {
               <button onClick={handleIncr}>+</button>
               <span className="qtyNumber">{quantity}</span>
               <button onClick={handleDecr}>-</button>
-              <button>add to cart</button>
+              {/* <button className="addToCartBtn">add to cart</button> */}
             </div>
           </div>
           <button className="buyNowBtn">BUY NOW</button>
