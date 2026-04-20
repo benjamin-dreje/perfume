@@ -47,5 +47,30 @@ p.detailedInfo {
 }
 .activeSize {
   color: white;
+  font-weight: 600px;
+  background-color: #623a69a6;
+}
+span.tag {
+  margin-right: 10px;
+
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #5c2d651f;
+}
+
+.priceInfo {
+  font-size: 22px;
+}
+button.addToCart {
+  height: 30px;
+  width: 140px;
+  border-style: none;
   background-color: #6b3d6b;
+  color: white;
+  font-weight: 800;
+  border-radius: 4px;
+}
+button.addToCart:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
 }
