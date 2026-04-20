@@ -58,6 +58,7 @@ export default function ProductPage({ params }) {
 
           {/* תגיות ריח */}
           <div className="scentTags">
+            <h4>Scent</h4>
             {scent.map((s) => (
               <span key={s} className="tag">
                 {s}

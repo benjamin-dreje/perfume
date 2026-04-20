@@ -32,7 +32,7 @@ export default function CategoryPage({ params }) {
       {category.toLowerCase() === "all" && (
         <div className="containerBtns">
           <button className="btn" onClick={() => setSelectedCategory("all")}>
-            All Perfumes
+            All
           </button>
           <button className="btn" onClick={() => setSelectedCategory("Men")}>
             Men
@@ -45,6 +45,15 @@ export default function CategoryPage({ params }) {
           </button>
         </div>
       )}
+      <div className="filterContainer">
+        <div className="resultFilter">
+          <p>result : {filteredPerfumes.length}</p>
+        </div>
+        <div className="filterIcon">
+          <p>Icon filter</p>
+        </div>
+      </div>
+
       <div className="grid4">
         {filteredPerfumes.length > 0 ? (
           filteredPerfumes.map((perfume) => (
