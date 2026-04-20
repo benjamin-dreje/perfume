@@ -87,10 +87,9 @@
 .details {
   background-color: #f0f0f0;
   color: #333;
+  height: 100%;
 }
 
 .details:hover {
   background-color: #e0e0e0;
 }
-
-

@@ -49,9 +49,14 @@ button.btn:hover {
   color: white;
 }
 .filterIcon {
-  background-color: rgb(209, 209, 209);
+  background-color: #f1f1f1;
   padding: 6px;
   border-radius: 10px;
+}
+
+.filterIcon:hover {
+  cursor: pointer;
+  background-color: #e4e2e2;
 }
 .filterContainer {
   display: flex;
@@ -64,6 +69,10 @@ button.btn:hover {
   display: flex;
   justify-content: center;
 }
+i.fa-solid.fa-filter {
+  margin-left: 10px;
+}
+
 @media (max-width: 1024px) {
   .grid4 {
     grid-template-columns: repeat(3, minmax(0, 1fr));

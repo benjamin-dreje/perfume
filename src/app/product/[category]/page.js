@@ -50,7 +50,10 @@ export default function CategoryPage({ params }) {
           <p>result : {filteredPerfumes.length}</p>
         </div>
         <div className="filterIcon">
-          <p>Icon filter</p>
+          <p>
+            filter
+            <i className="fa-solid fa-filter"></i>
+          </p>
         </div>
       </div>
 

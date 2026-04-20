@@ -51,13 +51,12 @@ p.detailedInfo {
   background-color: #623a69a6;
 }
 span.tag {
-  margin-right: 10px;
-
-  padding: 4px;
+  /* background-color: #dfdfdf; */
   border-radius: 4px;
-  background-color: #5c2d651f;
+  margin-right: 10px;
+  padding: 4px;
+  border: 1px dotted lightgray;
 }
-
 .priceInfo {
   font-size: 22px;
 }
@@ -108,4 +107,7 @@ button.buyNowBtn:hover {
   flex-direction: column; /* או row, תלוי בעיצוב שלך */
   gap: 15px;
   min-height: 80px; /* שומר על גובה קבוע לכל הקונטיינר כדי שלא יקפוץ */
+}
+i.fa-solid.fa-spray-can-sparkles {
+  margin-left: 4px;
 }

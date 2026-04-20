@@ -55,7 +55,12 @@ export default function ProductPage({ params }) {
                   className={selectedSize === s.size ? "activeSize" : ""}
                   onClick={() => setSelectedSize(s.size)}
                 >
-                  {s.size}
+                  <p>
+                    {s.size}
+                    {selectedSize === s.size && (
+                      <i className="fa-solid fa-spray-can-sparkles"></i>
+                    )}
+                  </p>
                 </button>
               ))}
             </div>
@@ -82,9 +87,13 @@ export default function ProductPage({ params }) {
           <div className="priceAndTotal">
             <div className="priceInfo">${totalPrice}</div>
             <div className="countPrice">
-              <button onClick={handleIncr}>+</button>
+              <button onClick={handleIncr}>
+                <i className="fa-solid fa-plus"></i>
+              </button>
               <span className="qtyNumber">{quantity}</span>
-              <button onClick={handleDecr}>-</button>
+              <button onClick={handleDecr}>
+                <i className="fa-solid fa-minus"></i>
+              </button>
               {/* <button className="addToCartBtn">add to cart</button> */}
             </div>
           </div>

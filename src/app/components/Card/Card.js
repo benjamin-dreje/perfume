@@ -19,7 +19,9 @@ export default function Card({ perfume }) {
       </div>
 
       <div className="cardButton">
-        <button className="add">Add</button>
+        <button className="add">
+          Add <i className="fa-solid fa-cart-arrow-down"></i>
+        </button>
         <Link href={`/products/${perfume.id}`}>
           <button className="details">Details</button>
         </Link>

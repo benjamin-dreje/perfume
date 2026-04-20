@@ -1,3 +1,4 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -7,4 +8,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+/* מבטיח שהאייקונים ישתמשו בפונט הנכון של Font Awesome */
+.fa-solid,
+.fa-brands,
+.fa-regular {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
 }
