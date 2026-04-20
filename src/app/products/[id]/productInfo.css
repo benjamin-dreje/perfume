@@ -109,6 +109,3 @@ button.buyNowBtn:hover {
   gap: 15px;
   min-height: 80px; /* שומר על גובה קבוע לכל הקונטיינר כדי שלא יקפוץ */
 }
-
-.addToCartBtn {
-}
