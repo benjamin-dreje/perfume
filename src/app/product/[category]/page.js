@@ -31,16 +31,31 @@ export default function CategoryPage({ params }) {
 
       {category.toLowerCase() === "all" && (
         <div className="containerBtns">
-          <button className="btn" onClick={() => setSelectedCategory("all")}>
+          <button
+            className={`btn ${selectedCategory === "all" ? "activeCategory" : ""}`}
+            onClick={() => setSelectedCategory("all")}
+          >
             All
           </button>
-          <button className="btn" onClick={() => setSelectedCategory("Men")}>
+
+          <button
+            className={`btn ${selectedCategory === "Men" ? "activeCategory" : ""}`}
+            onClick={() => setSelectedCategory("Men")}
+          >
             Men
           </button>
-          <button className="btn" onClick={() => setSelectedCategory("Women")}>
+
+          <button
+            className={`btn ${selectedCategory === "Women" ? "activeCategory" : ""}`}
+            onClick={() => setSelectedCategory("Women")}
+          >
             Women
           </button>
-          <button className="btn" onClick={() => setSelectedCategory("Unisex")}>
+
+          <button
+            className={`btn ${selectedCategory === "Unisex" ? "activeCategory" : ""}`}
+            onClick={() => setSelectedCategory("Unisex")}
+          >
             Unisex
           </button>
         </div>

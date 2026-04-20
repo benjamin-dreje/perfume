@@ -20,6 +20,12 @@ h1.pageTitle {
   text-align: center;
   font-size: 24px;
 }
+.activeCategory {
+  border-left: 3px solid #6b3d6b !important;
+  background: #f0e6f0 !important;
+  color: #6b3d6b !important;
+  font-weight: bold;
+}
 .containerBtns {
   display: flex;
   gap: 10px;
@@ -29,23 +35,18 @@ button.btn {
   width: 100px;
   background-color: #d3d3d35e;
   padding: 10px;
-  border-style: none;
+  border: 3px solid transparent;
   display: flex;
-  gap: 10px;
   height: 40px;
-  width: 100px;
   align-items: center;
   justify-content: center;
-  align-content: center;
   border-radius: 4px;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
+  color: #333;
 }
-
 button.btn:hover {
   cursor: pointer;
-
   background-color: #6b3d6b;
-
   color: white;
 }
 .filterIcon {

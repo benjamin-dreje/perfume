@@ -47,6 +47,32 @@ nav ul li a {
   font-size: 1.1rem;
 }
 
+.userLogo i,
+.userLogo svg {
+  font-size: 24px !important;
+  color: #333 !important;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.userLogo .fa-cart-arrow-down:hover {
+  color: #8b5a8e !important;
+  transform: scale(1.1);
+}
+
+.userLogo .fa-user:hover {
+  color: #8b5a8e !important;
+  transform: scale(1.1);
+}
+
+.userLogo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 nav ul li a:hover {
   text-decoration: none;
   color: var(--foreground);

@@ -22,14 +22,8 @@ export default function NavBar() {
         </div>
 
         <div className="userLogo">
-          <div
-            style={{
-              width: "40px",
-              height: "40px",
-              borderRadius: "50%",
-              backgroundColor: "#ccc",
-            }}
-          ></div>
+          <i className="fa-solid fa-cart-arrow-down"></i>
+          <i className="fa-solid fa-user"></i>
         </div>
       </nav>
     </header>
