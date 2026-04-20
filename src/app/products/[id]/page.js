@@ -39,7 +39,7 @@ export default function ProductPage({ params }) {
           <h1 className="titleInfo">{title}</h1>
 
           <div className="rating">
-            ⭐ <span>{rating} / 5</span>
+            <i className="fa-solid fa-star"></i> <span>{rating} / 5</span>
           </div>
 
           <p className="infoInfo">{info}</p>
