@@ -76,12 +76,12 @@ button.buyNowBtn:hover {
 .countPrice {
   display: flex;
   align-items: center;
-  gap: 10px; /* רווח קבוע בין האלמנטים */
+  gap: 10px;
+  justify-content: space-between;
 }
 
-/* הכפתורים של הפלוס והמינוס */
 .countPrice button:not(.addToCartBtn) {
-  width: 35px; /* רווח קבוע */
+  width: 35px;
   height: 35px;
   display: flex;
   justify-content: center;
@@ -94,19 +94,19 @@ button.buyNowBtn:hover {
   color: white;
 }
 
-/* המספר שבאמצע - זה החלק הכי חשוב! */
 .qtyNumber {
   display: inline-block;
-  min-width: 30px; /* מבטיח שהמספר תמיד יתפוס אותו מרחב, גם אם זה 1 וגם אם זה 10 */
+  min-width: 30px;
   text-align: center;
   font-weight: bold;
 }
 
 .priceAndTotal {
   display: flex;
-  flex-direction: column; /* או row, תלוי בעיצוב שלך */
+  flex-direction: column;
   gap: 15px;
-  min-height: 80px; /* שומר על גובה קבוע לכל הקונטיינר כדי שלא יקפוץ */
+  min-height: 80px;
+  width: 140px;
 }
 i.fa-solid.fa-spray-can-sparkles {
   margin-left: 4px;
