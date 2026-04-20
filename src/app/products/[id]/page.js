@@ -9,6 +9,7 @@ export default function ProductPage({ params }) {
 
   // State לבחירת גודל ומחיר דינמי
   const [selectedSize, setSelectedSize] = useState("100ml");
+  const [quantity, setQuantity] = useState(1);
 
   if (!perfume) {
     return <div className="not-found">Perfume not found</div>;
@@ -20,6 +21,10 @@ export default function ProductPage({ params }) {
   // מציאת המחיר לפי הגודל שנבחר (או המחיר הדיגיטלי כברירת מחדל)
   const selectedSizeData = sizes.find((s) => s.size === selectedSize);
   const currentPrice = selectedSizeData.price;
+  const totalPrice = currentPrice * quantity;
+
+  const handleIncr = () => setQuantity((prev) => prev + 1);
+  const handleDecr = () => setQuantity((prev) => prev - 1);
 
   return (
     <div className="productInfoContainer">
@@ -74,10 +79,16 @@ export default function ProductPage({ params }) {
               <strong>Sillage:</strong> {performance.sillage}
             </p>
           </div>
-
-          <div className="priceInfo">${currentPrice}</div>
-
-          <button className="addToCart">Add to Cart</button>
+          <div className="priceAndTotal">
+            <div className="priceInfo">${totalPrice}</div>
+            <div className="countPrice">
+              <button onClick={handleIncr}>+</button>
+              <span className="qtyNumber">{quantity}</span>
+              <button onClick={handleDecr}>-</button>
+              <button>add to cart</button>
+            </div>
+          </div>
+          <button className="buyNowBtn">BUY NOW</button>
         </div>
       </div>
     </div>

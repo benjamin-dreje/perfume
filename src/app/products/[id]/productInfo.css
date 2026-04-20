@@ -61,7 +61,7 @@ span.tag {
 .priceInfo {
   font-size: 22px;
 }
-button.addToCart {
+button.buyNowBtn {
   height: 30px;
   width: 140px;
   border-style: none;
@@ -70,7 +70,7 @@ button.addToCart {
   font-weight: 800;
   border-radius: 4px;
 }
-button.addToCart:hover {
+button.buyNowBtn:hover {
   cursor: pointer;
   transform: translateY(-2px);
 }
