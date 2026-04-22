@@ -60,6 +60,9 @@ span.tag {
 .priceInfo {
   font-size: 22px;
 }
+i.fa-solid.fa-star {
+    color: #c7c708;
+}
 button.buyNowBtn {
   height: 30px;
   width: 140px;
