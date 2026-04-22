@@ -60,11 +60,15 @@ button.btn:hover {
   background-color: #e4e2e2;
 }
 .filterContainer {
+  align-items: center;
+  /* margin: 10px; */
+  /* padding: 10px; */
   display: flex;
   justify-content: space-between;
-  margin: 10px;
-  padding: 10px;
-  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .containerBtns {
   display: flex;
