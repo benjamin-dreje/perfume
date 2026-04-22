@@ -111,3 +111,67 @@ button.buyNowBtn:hover {
 i.fa-solid.fa-spray-can-sparkles {
   margin-left: 4px;
 }
+
+/* --- רספונסיביות לנייד --- */
+
+@media (max-width: 768px) {
+  .productInfoContainer {
+    height: auto; /* מאפשר לדף לגדול לפי התוכן */
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+
+  .warrperInfo {
+    flex-direction: column; /* מעביר את התמונה והטקסט אחד מתחת לשני */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .imageWrapperInfo {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  img.imageInfo {
+    width: 100%; /* התמונה תתפוס את רוחב המסך */
+    max-width: 400px; /* אבל לא תהיה ענקית מדי */
+    height: auto; /* שומר על פרופורציות */
+  }
+
+  .infoWrapper {
+    width: 100%; /* הטקסט יתפרס על כל הרוחב */
+
+    gap: 15px;
+  }
+
+  .sizeButtons {
+    justify-content: center;
+    flex-wrap: wrap; /* אם הכפתורים לא נכנסים בשורה, הם ירדו למטה */
+  }
+
+  .scentTags {
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .priceAndTotal {
+    width: 100%;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .countPrice {
+    justify-content: center;
+  }
+
+  button.buyNowBtn {
+    width: 100%; /* כפתור קנייה גדול ונוח ללחיצה בנייד */
+    height: 45px;
+    margin-bottom: 30px;
+  }
+}
