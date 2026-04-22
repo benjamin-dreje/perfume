@@ -133,11 +133,11 @@ i.fa-solid.fa-spray-can-sparkles {
     display: flex;
     justify-content: center;
   }
-
   img.imageInfo {
-    width: 100%; /* התמונה תתפוס את רוחב המסך */
-    max-width: 400px; /* אבל לא תהיה ענקית מדי */
-    height: auto; /* שומר על פרופורציות */
+    width: 100%;
+    max-width: 400px;
+    /* height: auto; */
+    height: 250px;
   }
 
   .infoWrapper {
