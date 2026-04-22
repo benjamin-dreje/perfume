@@ -116,13 +116,13 @@ i.fa-solid.fa-spray-can-sparkles {
 
 @media (max-width: 768px) {
   .productInfoContainer {
-    height: auto; /* מאפשר לדף לגדול לפי התוכן */
+    height: auto;
     margin-top: 20px;
     padding: 0 15px;
   }
 
   .warrperInfo {
-    flex-direction: column; /* מעביר את התמונה והטקסט אחד מתחת לשני */
+    flex-direction: column;
     align-items: center;
     gap: 20px;
   }
@@ -141,14 +141,14 @@ i.fa-solid.fa-spray-can-sparkles {
   }
 
   .infoWrapper {
-    width: 100%; /* הטקסט יתפרס על כל הרוחב */
+    width: 100%;
 
     gap: 15px;
   }
 
   .sizeButtons {
     justify-content: center;
-    flex-wrap: wrap; /* אם הכפתורים לא נכנסים בשורה, הם ירדו למטה */
+    flex-wrap: wrap;
   }
 
   .scentTags {
@@ -170,7 +170,7 @@ i.fa-solid.fa-spray-can-sparkles {
   }
 
   button.buyNowBtn {
-    width: 100%; /* כפתור קנייה גדול ונוח ללחיצה בנייד */
+    width: 100%;
     height: 45px;
     margin-bottom: 30px;
   }
