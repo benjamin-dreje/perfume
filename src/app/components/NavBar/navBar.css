@@ -58,6 +58,25 @@ nav ul li a {
   display: inline-block;
 }
 
+.userCart {
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  /* top: 1px; */
+  background-color: purple;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* align-content: center; */
+  color: white;
+  bottom: 1px;
+  right: -5px;
+}
 .userLogo .fa-cart-arrow-down:hover {
   color: #8b5a8e !important;
   transform: scale(1.1);

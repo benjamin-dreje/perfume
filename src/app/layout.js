@@ -2,7 +2,7 @@ import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import "./globals.css";
 import { Poppins } from "next/font/google";
-
+import { CartProvider } from "../app/context/cartContext";
 // הגדרת הפונט
 const poppins = Poppins({
   subsets: ["latin"],
@@ -13,9 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <NavBar />
-        {children}
-        <Footer />
+        <CartProvider>
+          <NavBar />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

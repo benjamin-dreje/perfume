@@ -1,7 +1,11 @@
+"use client";
 import Link from "next/link";
 import "./navBar.css";
+import { useCart } from "../../context/cartContext";
 
 export default function NavBar() {
+  const { cartCount } = useCart();
+
   return (
     <header className="header">
       <nav>
@@ -22,7 +26,11 @@ export default function NavBar() {
         </div>
 
         <div className="userLogo">
-          <i className="fa-solid fa-cart-arrow-down"></i>
+          <div className="userCart">
+            <i className="fa-solid fa-cart-arrow-down"></i>
+            {cartCount > 0 && <div className="count">{cartCount}</div>}
+          </div>
+
           <i className="fa-solid fa-user"></i>
         </div>
       </nav>

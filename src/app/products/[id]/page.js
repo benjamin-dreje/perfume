@@ -2,9 +2,11 @@
 import { useState, use } from "react";
 import { perfumes } from "../../lib/perfume";
 import "./productInfo.css";
+import { useCart } from "@/app/context/cartContext";
 
 export default function ProductPage({ params }) {
   const { id } = use(params);
+  const { addToCart } = useCart();
   const perfume = perfumes.find((p) => p.id === parseInt(id));
 
   // State לבחירת גודל ומחיר דינמי
@@ -22,6 +24,16 @@ export default function ProductPage({ params }) {
   const selectedSizeData = sizes.find((s) => s.size === selectedSize);
   const currentPrice = selectedSizeData.price;
   const totalPrice = currentPrice * quantity;
+
+  const handleAddToCart = () => {
+    const productToAdd = {
+      ...perfume,
+      selectedSize: selectedSize, // שומרים איזה גודל נבחר
+      price: currentPrice, // שומרים את המחיר הספציפי לגודל הזה
+    };
+    addToCart(productToAdd, quantity); // שולחים גם את הכמות שנבחרה ב-State
+    alert(`Added ${quantity} x ${title} (${selectedSize}) to cart!`);
+  };
 
   const handleIncr = () => setQuantity((prev) => prev + 1);
   const handleDecr = () => setQuantity((prev) => prev - 1);
@@ -97,7 +109,9 @@ export default function ProductPage({ params }) {
               {/* <button className="addToCartBtn">add to cart</button> */}
             </div>
           </div>
-          <button className="buyNowBtn">BUY NOW</button>
+          <button onClick={handleAddToCart} className="buyNowBtn">
+            BUY NOW
+          </button>
         </div>
       </div>
     </div>
