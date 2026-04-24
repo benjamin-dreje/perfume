@@ -12,6 +12,7 @@ export default function Card({ perfume }) {
       price: price, // משתמש במחיר הדיפולטיבי של הכרטיס
     };
     addToCart(productWithDefaults, 1);
+    alert(`Added ${title} to cart!`);
   };
   return (
     <div className="card">
@@ -23,7 +24,6 @@ export default function Card({ perfume }) {
       <div className="cardInfo">
         <h3 className="title">{title}</h3>
         <p className="info">{info}</p>
-        {/* שימוש ב-span או div למחיר כדי למנוע מרג'ינים של h2 */}
         <div className="price">${price}</div>
       </div>
 
