@@ -44,7 +44,7 @@ export function CartProvider({ children }) {
       {showNotification && (
         <div className="cart-notification-global">
           <i className="fa-solid fa-circle-check"></i>
-          <span>Success! Added to cart </span>
+          <span>Added to cart! </span>
         </div>
       )}
     </CartContext.Provider>
