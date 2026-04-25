@@ -25,12 +25,14 @@ export default function NavBar() {
           </ul>
         </div>
 
-        <div className="userLogo">
-          <div className="userCart">
-            <i className="fa-solid fa-cart-arrow-down"></i>
-            {cartCount > 0 && <div className="count">{cartCount}</div>}
-          </div>
 
+        <div className="userLogo">
+          <Link href="/cart">
+            <div className="userCart">
+              <i className="fa-solid fa-cart-arrow-down"></i>
+              {cartCount > 0 && <div className="count">{cartCount}</div>}
+            </div>
+          </Link>
           <i className="fa-solid fa-user"></i>
         </div>
       </nav>

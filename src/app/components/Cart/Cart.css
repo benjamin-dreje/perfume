@@ -1,0 +1,61 @@
+/* מרכז את הכל */
+.cart-page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.cart-table-header {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 0.5fr; /* מחלק את השורה לעמודות */
+  padding: 10px 20px;
+  color: #666;
+  font-weight: bold;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 0.5fr; /* התאמה את השורה לעמודות */
+  align-items: center;
+  background: white;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.item-image-placeholder {
+  width: 80px;
+  height: 60px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+.item-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.item-info {
+  display: flex;
+  align-items: center;
+}
+
+.order-now-btn {
+  background: #6b3d6b;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  float: right;
+  margin-top: 20px;
+}
