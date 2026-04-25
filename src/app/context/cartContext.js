@@ -1,11 +1,21 @@
 "use client";
 
-import { useState, useContext, createContext } from "react";
+import { useState, useContext, useEffect, createContext } from "react";
 
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
+  const [showNotification, setShowNotification] = useState(false);
+
+  useEffect(() => {
+    if (showNotification) {
+      const timer = setTimeout(() => {
+        setShowNotification(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showNotification]);
 
   const addToCart = (product, customQuantity = 1) => {
     setCartItems((prev) => {
@@ -23,6 +33,7 @@ export function CartProvider({ children }) {
       }
       return [...prev, { ...product, quantity: customQuantity }];
     });
+    setShowNotification(true);
   };
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
   console.log(cartItems);
@@ -30,6 +41,12 @@ export function CartProvider({ children }) {
     // אנחנו מעבירים גם את ה-cartItems (לדף העגלה) וגם את ה-cartCount (לנאבר)
     <CartContext.Provider value={{ cartItems, cartCount, addToCart }}>
       {children}
+      {showNotification && (
+        <div className="cart-notification-global">
+          <i className="fa-solid fa-circle-check"></i>
+          <span>Success! Added to cart </span>
+        </div>
+      )}
     </CartContext.Provider>
   );
 }

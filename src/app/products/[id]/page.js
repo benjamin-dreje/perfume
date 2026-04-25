@@ -1,5 +1,5 @@
 "use client";
-import { useState, use } from "react";
+import { useState, use, useEffect } from "react";
 import { perfumes } from "../../lib/perfume";
 import "./productInfo.css";
 import { useCart } from "@/app/context/cartContext";
@@ -32,7 +32,6 @@ export default function ProductPage({ params }) {
       price: currentPrice, // שומרים את המחיר הספציפי לגודל הזה
     };
     addToCart(productToAdd, quantity); // שולחים גם את הכמות שנבחרה ב-State
-    alert(`Added ${quantity} x ${title} (${selectedSize}) to cart!`);
   };
 
   const handleIncr = () => setQuantity((prev) => prev + 1);

@@ -12,7 +12,6 @@ export default function Card({ perfume }) {
       price: price, // משתמש במחיר הדיפולטיבי של הכרטיס
     };
     addToCart(productWithDefaults, 1);
-    alert(`Added ${title} to cart!`);
   };
   return (
     <div className="card">
