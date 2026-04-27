@@ -2,10 +2,14 @@
 import Link from "next/link";
 import "./navBar.css";
 import { useCart } from "../../context/cartContext";
+import { useState, useEffect } from "react";
 
 export default function NavBar() {
   const { cartCount } = useCart();
-
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   return (
     <header className="header">
       <nav>
@@ -25,12 +29,14 @@ export default function NavBar() {
           </ul>
         </div>
 
-
         <div className="userLogo">
           <Link href="/cart">
             <div className="userCart">
               <i className="fa-solid fa-cart-arrow-down"></i>
-              {cartCount > 0 && <div className="count">{cartCount}</div>}
+
+              {isMounted && cartCount > 0 && (
+                <div className="count">{cartCount}</div>
+              )}
             </div>
           </Link>
           <i className="fa-solid fa-user"></i>

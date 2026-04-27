@@ -5,8 +5,28 @@ import { useState, useContext, useEffect, createContext } from "react";
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([]);
   const [showNotification, setShowNotification] = useState(false);
+
+  const [cartItems, setCartItems] = useState(function () {
+    try {
+      const saved = localStorage.getItem("cartItem");
+
+      if (saved !== null) {
+        const cartObject = JSON.parse(saved);
+        return cartObject;
+      } else {
+        return [];
+      }
+    } catch (error) {
+      console.error("Failed to parse cart items:", error);
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cartItem", JSON.stringify(cartItems));
+    console.log(cartItems);
+  }, [cartItems]);
 
   useEffect(() => {
     if (showNotification) {
