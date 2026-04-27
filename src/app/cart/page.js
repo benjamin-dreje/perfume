@@ -45,7 +45,7 @@ export default function CartPage() {
         <span></span>
       </div>
 
-      <div className="cart-list">
+      <div className="cart-list hide-scrollbar">
         {cartItems.length > 0 ? (
           cartItems.map((item) => (
             <CardComponent

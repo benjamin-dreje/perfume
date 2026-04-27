@@ -34,6 +34,16 @@
   animation: slideDown 0.3s ease-out;
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* הסתרה עבור IE, Edge ו-Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 @keyframes slideDown {
   from {
     transform: translate(-50%, -20px);

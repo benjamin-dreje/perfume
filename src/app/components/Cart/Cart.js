@@ -4,7 +4,7 @@ import { useCart } from "../../context/cartContext"; // וודא שהנתיב נ
 export default function Cart({ item }) {
   const { title, image, price, info, quantity, selectedSize } = item;
   return (
-    <div className="cart-item">
+    <div className="cart-item ">
       {/* תמונה ופרטים */}
       <div className="item-info">
         <div className="item-image-placeholder">
@@ -31,7 +31,9 @@ export default function Cart({ item }) {
       <div className="item-total">${(price * (quantity || 1)).toFixed(2)}</div>
 
       {/* כפתור מחיקה */}
-      <button className="remove-btn">delete</button>
+      <button className="remove-btn">
+        <i className="fa-solid fa-trash"></i>
+      </button>
     </div>
   );
 }
