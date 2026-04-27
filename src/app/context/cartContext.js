@@ -7,22 +7,20 @@ const CartContext = createContext();
 export function CartProvider({ children }) {
   const [showNotification, setShowNotification] = useState(false);
 
-  const [cartItems, setCartItems] = useState(function () {
+  const [cartItems, setCartItems] = useState(() => {
     try {
-      const saved = localStorage.getItem("cartItem");
-
-      if (saved !== null) {
-        const cartObject = JSON.parse(saved);
-        return cartObject;
-      } else {
-        return [];
+      if (typeof window !== "undefined") {
+        const saved = localStorage.getItem("cartItem");
+        if (saved !== null) {
+          return JSON.parse(saved);
+        }
       }
+      return [];
     } catch (error) {
       console.error("Failed to parse cart items:", error);
       return [];
     }
   });
-
   useEffect(() => {
     localStorage.setItem("cartItem", JSON.stringify(cartItems));
     console.log(cartItems);
