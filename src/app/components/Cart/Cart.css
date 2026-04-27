@@ -105,6 +105,15 @@ p.sizeSelected {
   font-size: 1rem;
   background-color: rgb(238, 238, 238);
 }
+.item-quantity button:hover {
+  padding: 4px;
+  width: 100%;
+  border-radius: 4px;
+  border-style: none;
+  font-size: 1rem;
+  background-color: rgb(209, 209, 209);
+  cursor: pointer;
+}
 .item-total {
   font-weight: 600;
 }
@@ -159,6 +168,16 @@ p.sizeSelected {
     border-style: none;
     font-size: 1rem;
     background-color: rgb(238, 238, 238);
+  }
+
+  .item-quantity button:hover {
+    padding: 4px;
+    width: 100%;
+    border-radius: 4px;
+    border-style: none;
+    font-size: 1rem;
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
   }
   .item-total {
     font-weight: 600;
