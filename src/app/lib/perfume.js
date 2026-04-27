@@ -280,7 +280,7 @@ export const perfumes = [
     sizes: [
       { size: "40ml", price: 210 },
       { size: "75ml", price: 290 },
-      { size: "125ml", price: 390 },
+      { size: "100ml", price: 390 },
     ],
     scent: ["Sexy", "Unconventional", "Lavender", "Warm", "Vanilla"],
     performance: { longevity: "Long Lasting", sillage: "Moderate" },
@@ -320,9 +320,9 @@ export const perfumes = [
     price: 620, // Default (100ml)
     rating: 4.9,
     sizes: [
-      { size: "35ml", price: 380 },
-      { size: "50ml", price: 440 },
-      { size: "100ml", price: 620 },
+      { size: "50", price: 380 },
+      { size: "100ml", price: 440 },
+      { size: "200ml", price: 620 },
     ],
     scent: ["Chic", "Rebellious", "Oriental", "Floral", "Elegant"],
     performance: { longevity: "Long Lasting", sillage: "Strong" },
@@ -340,9 +340,9 @@ export const perfumes = [
     price: 490, // Default (100ml)
     rating: 4.7,
     sizes: [
-      { size: "30ml", price: 290 },
-      { size: "50ml", price: 350 },
-      { size: "100ml", price: 490 },
+      { size: "50ml", price: 290 },
+      { size: "100ml", price: 350 },
+      { size: "200ml", price: 490 },
     ],
     scent: ["Fearless", "Free", "Lavender", "Orange Blossom", "Bold"],
     performance: { longevity: "Long Lasting", sillage: "Moderate" },
@@ -360,9 +360,9 @@ export const perfumes = [
     price: 550, // Default (100ml)
     rating: 4.8,
     sizes: [
-      { size: "30ml", price: 310 },
-      { size: "50ml", price: 390 },
-      { size: "100ml", price: 550 },
+      { size: "50ml", price: 310 },
+      { size: "100ml", price: 390 },
+      { size: "200ml", price: 550 },
     ],
     scent: ["Luminous", "Golden", "Floral Bouquet", "Radiant", "Classic"],
     performance: { longevity: "Moderate", sillage: "Moderate" },
@@ -380,9 +380,9 @@ export const perfumes = [
     price: 430, // Default (100ml)
     rating: 4.6,
     sizes: [
-      { size: "30ml", price: 260 },
-      { size: "50ml", price: 310 },
-      { size: "100ml", price: 430 },
+      { size: "50ml", price: 260 },
+      { size: "100ml", price: 310 },
+      { size: "200ml", price: 430 },
     ],
     scent: ["Sweet", "Joyful", "Gourmand", "Iris", "Praline"],
     performance: { longevity: "Long Lasting", sillage: "Heavy" },
@@ -400,9 +400,9 @@ export const perfumes = [
     price: 510, // Default (80ml)
     rating: 4.7,
     sizes: [
-      { size: "30ml", price: 280 },
-      { size: "50ml", price: 360 },
-      { size: "80ml", price: 510 },
+      { size: "50ml", price: 280 },
+      { size: "100ml", price: 360 },
+      { size: "200ml", price: 510 },
     ],
     scent: ["Dark", "Light", "Tonka", "Coffee", "Jasmine"],
     performance: { longevity: "Long Lasting", sillage: "Strong" },
@@ -420,9 +420,9 @@ export const perfumes = [
     price: 480, // Default (100ml)
     rating: 4.5,
     sizes: [
-      { size: "30ml", price: 250 },
-      { size: "50ml", price: 340 },
-      { size: "100ml", price: 480 },
+      { size: "50ml", price: 250 },
+      { size: "100ml", price: 340 },
+      { size: "200ml", price: 480 },
     ],
     scent: ["Enchanting", "Floral", "Solar", "Gardenia", "Pear Blossom"],
     performance: { longevity: "Moderate", sillage: "Moderate" },
@@ -463,7 +463,7 @@ export const perfumes = [
     rating: 5.0,
     sizes: [
       { size: "35ml", price: 850 },
-      { size: "70ml", price: 1450 },
+      { size: "100ml", price: 1450 },
       { size: "200ml", price: 2600 },
     ],
     scent: ["Hypnotic", "Airy", "Saffron", "Jasmine", "Amberwood"],
