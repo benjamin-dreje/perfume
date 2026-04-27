@@ -159,14 +159,15 @@ p.sizeSelected {
     padding: 15px;
     font-size: 1rem;
   }
-  .item-quantity {
-    grid-template-columns: 1fr 2fr 1fr;
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-  }
+     .item-quantity {
+        grid-template-columns: 2fr 1fr 2fr;
+        place-items: center;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+    }
   .item-quantity button {
     padding: 6px;
     width: 100%;
