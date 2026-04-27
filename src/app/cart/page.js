@@ -11,6 +11,9 @@ export default function CartPage() {
   useEffect(() => {
     setIsMounted(true);
   }, []);
+  const totalPrice = cartItems.reduce((acc, item) => {
+    return acc + item.price * (item.quantity || 1);
+  }, 0);
 
   if (!isMounted) {
     return (
@@ -57,8 +60,11 @@ export default function CartPage() {
           <p>Your cart is empty.</p>
         )}
       </div>
-
       <div className="cart-footer">
+        <div className="total-summary">
+          <span>Total: </span>
+          <strong>${totalPrice.toFixed(2)}</strong>
+        </div>
         <button className="order-now-btn">Order Now →</button>
       </div>
     </div>
