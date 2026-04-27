@@ -29,7 +29,9 @@ export default function Cart({ item }) {
 
       {/* סכום כולל לשורה */}
       <div className="item-total">${(price * (quantity || 1)).toFixed(2)}</div>
-
+      <div className="unitPrice">
+        <p>Unit price {price}</p>
+      </div>
       {/* כפתור מחיקה */}
       <button className="remove-btn">
         <i className="fa-solid fa-trash"></i>

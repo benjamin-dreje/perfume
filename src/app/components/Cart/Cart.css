@@ -117,6 +117,10 @@ p.sizeSelected {
 .item-total {
   font-weight: 600;
 }
+
+.unitPrice {
+  display: none;
+}
 @media (max-width: 600px) {
   .cart-table-header {
     display: none;
@@ -125,6 +129,7 @@ p.sizeSelected {
     grid-template-columns: 1fr;
     text-align: left;
     gap: 6px;
+    position: relative;
   }
   .item-image-placeholder {
     border-radius: 20px;
@@ -188,8 +193,23 @@ p.sizeSelected {
     border: none;
     border-radius: 4px;
     width: max-content;
+    position: absolute;
+    top: 30px;
+    right: 40px;
     /* height: 40px; */
     /* padding: 8px 16px; */
     /* font-size: 16px; */
+  }
+  .item-price {
+    display: none;
+  }
+
+  .unitPrice {
+    display: block;
+  }
+  .unitPrice p {
+    display: block;
+    font-size: 13px;
+    color: gray;
   }
 }
