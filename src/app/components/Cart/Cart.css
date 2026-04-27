@@ -7,7 +7,7 @@
 
 .main-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 24px;
   margin-bottom: 30px;
 }
 
@@ -144,7 +144,7 @@ p.sizeSelected {
   }
 
   .item-image-placeholder img {
-    border-radius: 20px;  
+    border-radius: 20px;
   }
   .item-text {
     text-align: left;
