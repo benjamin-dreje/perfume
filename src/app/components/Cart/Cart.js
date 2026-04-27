@@ -13,7 +13,7 @@ export default function Cart({ item }) {
         <div className="item-text">
           <h4>{title}</h4>
           <p>{info}</p>
-          {selectedSize && <p>Size: {selectedSize}</p>}
+          {selectedSize && <p className="sizeSelected">Size: {selectedSize}</p>}
         </div>
       </div>
 
