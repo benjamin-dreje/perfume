@@ -169,7 +169,7 @@ p.sizeSelected {
   .item-quantity button {
     padding: 4px;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 6px;
     border-style: none;
     font-size: 1rem;
     background-color: rgb(238, 238, 238);
@@ -178,7 +178,7 @@ p.sizeSelected {
   .item-quantity button:hover {
     padding: 4px;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 6px;
     border-style: none;
     font-size: 1rem;
     background-color: rgb(209, 209, 209);
