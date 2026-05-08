@@ -126,11 +126,6 @@ p.sizeSelected {
   color: black;
 }
 
-.cart-list p {
-  text-align: center;
-  margin-top: 40px;
-}
-
 @media (max-width: 600px) {
   .cart-table-header {
     display: none;
