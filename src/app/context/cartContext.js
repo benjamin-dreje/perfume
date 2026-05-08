@@ -35,6 +35,19 @@ export function CartProvider({ children }) {
     }
   }, [showNotification]);
 
+  const updateQuantity = (id, size, newQuantity) => {
+    if (newQuantity < 1) return;
+
+    setCartItems((prevCart) =>
+      prevCart.map((item) =>
+        // בדיקה כפולה: גם ה-ID וגם המידה חייבים להתאים
+        item.id === id && item.selectedSize === size
+          ? { ...item, quantity: newQuantity }
+          : item,
+      ),
+    );
+  };
+
   const addToCart = (product, customQuantity = 1) => {
     setCartItems((prev) => {
       const exists = prev.find(
@@ -54,8 +67,13 @@ export function CartProvider({ children }) {
     setShowNotification(true);
   };
 
-  const deleteCart = (productId) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== productId));
+  const deleteCart = (productId, selectedSize) => {
+    setCartItems((prev) =>
+      prev.filter(
+        (item) =>
+          !(item.id === productId && item.selectedSize === selectedSize),
+      ),
+    );
   };
 
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
@@ -63,7 +81,7 @@ export function CartProvider({ children }) {
   return (
     // אנחנו מעבירים גם את ה-cartItems (לדף העגלה) וגם את ה-cartCount (לנאבר)
     <CartContext.Provider
-      value={{ cartItems, cartCount, addToCart, deleteCart }}
+      value={{ cartItems, cartCount, addToCart, deleteCart, updateQuantity }}
     >
       {children}
       {showNotification && (

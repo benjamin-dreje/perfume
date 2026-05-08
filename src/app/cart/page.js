@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 export default function CartPage() {
   const { cartItems } = useCart();
   const [isMounted, setIsMounted] = useState(false);
+ 
 
   useEffect(() => {
     setIsMounted(true);

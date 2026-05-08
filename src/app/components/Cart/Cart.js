@@ -1,9 +1,20 @@
 import "./Cart.css";
 import { useCart } from "../../context/cartContext"; // וודא שהנתיב נכון
+import { useState } from "react";
 
 export default function Cart({ item }) {
   const { id, title, image, price, info, quantity, selectedSize } = item;
+
   const deleteCart = useCart().deleteCart;
+  const updateQuantity = useCart().updateQuantity;
+
+  const handleInc = () => {
+    updateQuantity(id, selectedSize, quantity + 1);
+  };
+
+  const handleDecr = () => {
+    updateQuantity(id, selectedSize, quantity - 1);
+  };
 
   return (
     <div className="cart-item ">
@@ -21,9 +32,9 @@ export default function Cart({ item }) {
 
       {/* כמות */}
       <div className="item-quantity">
-        <button>-</button>
+        <button onClick={handleDecr}>-</button>
         <span>{quantity || 1}</span>
-        <button>+</button>
+        <button onClick={handleInc}>+</button>
       </div>
 
       {/* מחיר ליחידה */}
@@ -35,7 +46,7 @@ export default function Cart({ item }) {
         <p>Unit price {price}</p>
       </div>
       {/* כפתור מחיקה */}
-      <button className="remove-btn" onClick={() => deleteCart(id)}>
+      <button className="remove-btn" onClick={() => deleteCart(id ,selectedSize)}>
         <i className="fa-solid fa-trash"></i>
       </button>
     </div>

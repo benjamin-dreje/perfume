@@ -35,8 +35,15 @@ export default function ProductPage({ params }) {
   };
 
   const handleIncr = () => setQuantity((prev) => prev + 1);
-  const handleDecr = () => setQuantity((prev) => prev - 1);
-
+  const handleDecr = () => {
+    setQuantity((prev) => {
+      if (prev > 1) {
+        return prev - 1;
+      } else {
+        return prev;
+      }
+    });
+  };
   return (
     <div className="productInfoContainer">
       <div className="warrperInfo">
