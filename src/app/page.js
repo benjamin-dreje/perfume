@@ -70,6 +70,14 @@ export default function Home() {
           </article>
         </div>
       </section>
+
+      <section>
+        // artical -crad
+        <div className="section-2-container">
+          <artical className="section-2-card-left"></artical>
+          <artical className="section-2-card-right"></artical>
+        </div>
+      </section>
     </main>
   );
 }
