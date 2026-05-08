@@ -4,6 +4,10 @@
   margin: 0 auto;
   padding: 20px;
 }
+.cartEmpty{
+  text-align: center;
+  margin-top: 40px;
+}
 
 .main-title {
   text-align: center;

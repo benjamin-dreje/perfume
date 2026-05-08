@@ -58,7 +58,7 @@ export default function CartPage() {
             />
           ))
         ) : (
-          <p>Your cart is empty.</p>
+          <p className="cartEmpty">Your cart is empty.</p>
         )}
       </div>
       <div className="cart-footer">
