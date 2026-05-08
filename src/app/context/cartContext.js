@@ -53,11 +53,18 @@ export function CartProvider({ children }) {
     });
     setShowNotification(true);
   };
+
+  const deleteCart = (productId) => {
+    setCartItems((prev) => prev.filter((item) => item.id !== productId));
+  };
+
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
   console.log(cartItems);
   return (
     // אנחנו מעבירים גם את ה-cartItems (לדף העגלה) וגם את ה-cartCount (לנאבר)
-    <CartContext.Provider value={{ cartItems, cartCount, addToCart }}>
+    <CartContext.Provider
+      value={{ cartItems, cartCount, addToCart, deleteCart }}
+    >
       {children}
       {showNotification && (
         <div className="cart-notification-global">

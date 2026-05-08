@@ -2,7 +2,9 @@ import "./Cart.css";
 import { useCart } from "../../context/cartContext"; // וודא שהנתיב נכון
 
 export default function Cart({ item }) {
-  const { title, image, price, info, quantity, selectedSize } = item;
+  const { id, title, image, price, info, quantity, selectedSize } = item;
+  const deleteCart = useCart().deleteCart;
+
   return (
     <div className="cart-item ">
       {/* תמונה ופרטים */}
@@ -33,7 +35,7 @@ export default function Cart({ item }) {
         <p>Unit price {price}</p>
       </div>
       {/* כפתור מחיקה */}
-      <button className="remove-btn">
+      <button className="remove-btn" onClick={() => deleteCart(id)}>
         <i className="fa-solid fa-trash"></i>
       </button>
     </div>
