@@ -10,9 +10,10 @@ dotenv.config();
 // create express app
 const app = express();
 const PORT = process.env.PORT || 5000;
-app.use("/api/perfumes", perfumeRoutes); //api/perfumes to all routes in perfumeRoutes 
-//middleWares
 configureGlobalMiddlewares(app);
+
+app.use("/api/perfumes", perfumeRoutes); //api/perfumes to all routes in perfumeRoutes
+//middleWares
 
 //cheack endpoint
 app.get("/api/test", (req, res) => {
@@ -20,11 +21,10 @@ app.get("/api/test", (req, res) => {
 });
 
 // conect to DB
-const MONGODB_URI = process.env.MONGODB_URI;
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(MONGODB_URI);
+    await mongoose.connect(process.env.MONGODB_URI);
 
     console.log("Successfully connected to MongoDB Atlas!");
 
