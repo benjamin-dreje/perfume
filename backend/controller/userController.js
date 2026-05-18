@@ -1,5 +1,4 @@
 import User from "../model/userModel.js";
-
 // Register a new user
 export const registerUser = async (req, res) => {
   const { username, email, password } = req.body;
@@ -18,7 +17,8 @@ export const registerUser = async (req, res) => {
     }
 
     const savedUser = await User.create({ username, email, password });
-    const { id, username, email, createdAt } = savedUser;
+
+    const { _id, createdAt } = savedUser;
 
     res.status(201).json({
       message: "User registered successfully",

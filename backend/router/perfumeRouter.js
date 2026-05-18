@@ -11,7 +11,6 @@ const router = express.Router();
 router.get("/", getPerfumes);
 
 //api/perfumes/:id get perfume by id
-
 router.get("/:id", getPerfumeById);
 
 export default router;
