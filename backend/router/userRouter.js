@@ -7,4 +7,6 @@ const router = express.Router();
 //api/users/register
 router.post("/register", registerUser);
 
+//api/users/login
+
 export const userRoutes = router;
