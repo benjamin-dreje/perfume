@@ -29,3 +29,34 @@ export const registerUser = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
+// Simple login for testing (compares plain passwords)
+export const login = async (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res
+      .status(400)
+      .json({ message: "Please provide email and password" });
+  }
+
+  try {
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    if (user.password !== password) {
+      return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    const { _id, username } = user;
+    return res.json({
+      message: "Login successful",
+      user: { id: _id, username, email },
+    });
+  } catch (error) {
+    console.error("login error:", error);
+    res.status(500).json({ message: "Server error", error: error.message });
+  }
+};
