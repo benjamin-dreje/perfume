@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import configureGlobalMiddlewares from "./middlewares/globalMiddlewares.js";
 import perfumeRoutes from "./router/perfumeRouter.js";
+import { userRoutes } from "./router/userRouter.js";
 
 // load dotenv file
 dotenv.config();
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 5000;
 configureGlobalMiddlewares(app);
 
 app.use("/api/perfumes", perfumeRoutes); //api/perfumes to all routes in perfumeRoutes
+app.use("/api/users", userRoutes); //api/users to all routes in userRoutes
 //middleWares
 
 //cheack endpoint
@@ -28,16 +30,12 @@ const connectDB = async () => {
 
     console.log("Successfully connected to MongoDB Atlas!");
 
-    // app.listen(PORT, () => {
-    //   console.log(`Server is running smoothly on port ${PORT}`);
-    // });
+    app.listen(PORT, () => {
+      console.log(`Server is running smoothly on port ${PORT}`);
+    });
   } catch (err) {
     console.error("MongoDB connection error:", err);
   }
 };
 
-// start the server
-app.listen(PORT, () => {
-  console.log(`Server is running smoothly on port ${PORT}`);
-});
 connectDB();
