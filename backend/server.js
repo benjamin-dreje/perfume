@@ -17,9 +17,12 @@ app.use("/api/perfumes", perfumeRoutes); //api/perfumes to all routes in perfume
 app.use("/api/users", userRoutes); //api/users to all routes in userRoutes
 //middleWares
 
-//cheack endpoint
-app.get("/api/test", (req, res) => {
-  res.json({ message: "Hello from the Perfume Backend with ES Modules!" });
+//Url validation
+app.use((req, res) => {
+  res.status(404).json({
+    message:
+      "Invalid URL - The requested resource was not found on this server",
+  });
 });
 
 // conect to DB
