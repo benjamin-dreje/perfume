@@ -1,58 +1,90 @@
 "use client";
-import { useState, use, useEffect } from "react";
-import { perfumes } from "../../lib/perfume";
+
+import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { useParams } from "next/navigation";
 import "./productInfo.css";
 import { useCart } from "../../context/cartContext";
 
-export default function ProductPage({ params }) {
-  const { id } = use(params);
-  const { addToCart } = useCart();
-  const perfume = perfumes.find((p) => p.id === parseInt(id));
+// fetch נקי
+const fetchPerfumeById = async (id) => {
+  const response = await fetch(`http://localhost:5000/api/perfumes/${id}`);
 
-  // State לבחירת גודל ומחיר דינמי
+  if (!response.ok) {
+    throw new Error("Failed to fetch perfume details");
+  }
+
+  const result = await response.json();
+  return result.data;
+};
+
+export default function ProductPage() {
+  const params = useParams();
+  const id = params?.id;
+
+  const { addToCart } = useCart();
+
   const [selectedSize, setSelectedSize] = useState("100ml");
   const [quantity, setQuantity] = useState(1);
 
-  if (!perfume) {
+  const {
+    data: perfume,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["perfume", id],
+    queryFn: () => fetchPerfumeById(id),
+    enabled: !!id,
+  });
+
+  if (isLoading || !id) {
+    return (
+      <div className="productInfoContainer">
+        <p style={{ textAlign: "center", marginTop: "5rem" }}>
+          Loading perfume details...
+        </p>
+      </div>
+    );
+  }
+
+  if (isError || !perfume) {
     return <div className="not-found">Perfume not found</div>;
   }
 
-  const { title, image, info, info2, rating, sizes, scent, performance } =
-    perfume;
+  const {
+    title,
+    image,
+    info,
+    info2,
+    rating,
+    sizes = [],
+    scent = [],
+    performance = {},
+  } = perfume;
 
-  // מציאת המחיר לפי הגודל שנבחר (או המחיר הדיגיטלי כברירת מחדל)
   const selectedSizeData = sizes.find((s) => s.size === selectedSize);
-  const currentPrice = selectedSizeData.price;
+
+  const currentPrice = selectedSizeData?.price || 0;
   const totalPrice = currentPrice * quantity;
 
   const handleAddToCart = () => {
-    const productToAdd = {
-      ...perfume,
-      selectedSize: selectedSize, // שומרים איזה גודל נבחר
-      price: currentPrice, // שומרים את המחיר הספציפי לגודל הזה
-    };
-    addToCart(productToAdd, quantity); // שולחים גם את הכמות שנבחרה ב-State
+    addToCart(
+      {
+        ...perfume,
+        selectedSize,
+        price: currentPrice,
+      },
+      quantity,
+    );
   };
 
-  const handleIncr = () => setQuantity((prev) => prev + 1);
-  const handleDecr = () => {
-    setQuantity((prev) => {
-      if (prev > 1) {
-        return prev - 1;
-      } else {
-        return prev;
-      }
-    });
-  };
   return (
     <div className="productInfoContainer">
       <div className="warrperInfo">
-        {/* צד שמאל - תמונה */}
         <div className="imageWrapperInfo">
           <img className="imageInfo" src={image} alt={title} />
         </div>
 
-        {/* צד ימין - מידע */}
         <div className="infoWrapper">
           <h1 className="titleInfo">{title}</h1>
 
@@ -63,7 +95,6 @@ export default function ProductPage({ params }) {
           <p className="infoInfo">{info}</p>
           <p className="detailedInfo">{info2}</p>
 
-          {/* בחירת גודל */}
           <div className="sizeSelection">
             <h4>Select Size:</h4>
             <div className="sizeButtons">
@@ -73,18 +104,16 @@ export default function ProductPage({ params }) {
                   className={selectedSize === s.size ? "activeSize" : ""}
                   onClick={() => setSelectedSize(s.size)}
                 >
-                  <p>
+   <p>
                     {s.size}
                     {selectedSize === s.size && (
                       <i className="fa-solid fa-spray-can-sparkles"></i>
                     )}
-                  </p>
-                </button>
+                  </p>                </button>
               ))}
             </div>
           </div>
 
-          {/* תגיות ריח */}
           <div className="scentTags">
             <h4>Scent</h4>
             {scent.map((s) => (
@@ -102,19 +131,21 @@ export default function ProductPage({ params }) {
               <strong>Sillage:</strong> {performance.sillage}
             </p>
           </div>
+
           <div className="priceAndTotal">
             <div className="priceInfo">${totalPrice}</div>
+
             <div className="countPrice">
-              <button onClick={handleIncr}>
-                <i className="fa-solid fa-plus"></i>
+              <button onClick={() => setQuantity((p) => p + 1)}> <i className="fa-solid fa-plus"></i></button>
+
+              <span>{quantity}</span>
+
+              <button onClick={() => setQuantity((p) => (p > 1 ? p - 1 : p))}>
+                 <i className="fa-solid fa-minus"></i>
               </button>
-              <span className="qtyNumber">{quantity}</span>
-              <button onClick={handleDecr}>
-                <i className="fa-solid fa-minus"></i>
-              </button>
-              {/* <button className="addToCartBtn">add to cart</button> */}
             </div>
           </div>
+
           <button onClick={handleAddToCart} className="buyNowBtn">
             BUY NOW
           </button>

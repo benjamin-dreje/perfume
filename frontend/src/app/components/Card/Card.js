@@ -27,11 +27,13 @@ export default function Card({ perfume }) {
       </div>
 
       <div className="cardButton">
-        <button onClick={handleAddToCart} className="add">
+        <button type="button" onClick={handleAddToCart} className="add">
           Add <i className="fa-solid fa-cart-arrow-down"></i>
         </button>
-        <Link href={`/products/${perfume.id}`}>
-          <button className="details">Details</button>
+        <Link href={`/products/${perfume._id}`}>
+          <button type="button" className="details">
+            Details
+          </button>
         </Link>
       </div>
     </div>
