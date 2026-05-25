@@ -11,6 +11,7 @@ const configureGlobalMiddlewares = (app) => {
           "http://localhost:3000",
           "https://perfume-nine-chi.vercel.app",
           "https://hoppscotch.io",
+          "https://hoppscotch.io/",
         ];
 
         if (allowed.includes(origin)) {
