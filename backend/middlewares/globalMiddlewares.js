@@ -16,6 +16,7 @@ const configureGlobalMiddlewares = (app) => {
           "https://perfume-nine-chi.vercel.app",
           "https://hoppscotch.io",
           "https://hoppscotch.io/",
+          "chrome-extension://amknoiejhlmhancpahfcfcfhllgkpbld",
         ];
 
         if (allowed.includes(origin)) {
