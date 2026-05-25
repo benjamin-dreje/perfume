@@ -30,7 +30,7 @@ export const registerUser = async (req, res) => {
   }
 };
 
-// Simple login for testing (compares plain passwords)
+// Login user
 export const login = async (req, res) => {
   const { email, password } = req.body;
 
