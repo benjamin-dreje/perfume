@@ -14,8 +14,6 @@ const configureGlobalMiddlewares = (app) => {
           "http://localhost:3000",
           "http://localhost:5173",
           "https://perfume-nine-chi.vercel.app",
-          "https://hoppscotch.io",
-          "https://hoppscotch.io/",
           "chrome-extension://amknoiejhlmhancpahfcfcfhllgkpbld",
         ];
 
