@@ -27,7 +27,7 @@ export default function Home() {
 
       <section className="categorySection">
         <div className="title">
-          <h3 className="titleH">Explore Our Categories</h3>
+          <h2 className="titleH">Explore Our Categories</h2>
         </div>
         <div className="cardContainer">
           <article className="card">

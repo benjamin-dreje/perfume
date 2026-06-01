@@ -105,12 +105,6 @@
   margin-bottom: 30px;
 }
 
-.categorySection .titleH {
-  font-size: 2rem;
-  color: #222;
-  margin: 0;
-}
-
 .cardContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
