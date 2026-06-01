@@ -1,264 +1,324 @@
-section.heroSection {
+.heroSection {
+  background-color: #fcfbf9;
+  padding: 40px 20px;
   display: flex;
-  justify-content: center;
-  align-content: center;
   align-items: center;
-  height: 650px;
+  justify-content: center;
 }
+
+/* הקונטיינר המרכזי */
 .containerHome {
+  max-width: 1200px;
+  width: 100%;
   display: flex;
   flex-direction: row-reverse;
-  /* align-content: center; */
-  width: 80%;
   align-items: center;
-  justify-content: space-around;
+  gap: 40px;
 }
+
+.homeImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .homeImage img {
-  width: 700px;
-  /* margin-left: -100px; */
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  width: 100%;
 }
 
 .homeText {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  width: 40%;
-  height: 300px;
+  justify-content: center;
+  text-align: left;
 }
 
-.homeText h1 {
+.info h1 {
   font-size: 2.5rem;
-  margin-bottom: 4px;
+  color: #222;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
-.homeText p {
-  font-size: 1rem;
-  color: rgba(68, 63, 63, 0.897);
+.info p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 25px;
 }
 
-.homeText .homeBtns button {
+.homeBtns button {
   background-color: #6b3d6b;
-  padding: 8px 16px;
-  border-style: none;
-  color: white;
-  border-radius: 4px;
-  font-size: 1.1rem;
-}
-
-.homeText .homeBtns button:hover {
-  background-color: #6b3d6bce;
-  padding: 8px 16px;
-  border-style: none;
-  color: white;
-  border-radius: 4px;
-  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
   cursor: pointer;
+  border-radius: 4px;
+  width: fit-content;
 }
 
-/* SECTION CATEGORIES */
-/* וודא שהשם של ה-class ב-HTML הוא categorySection */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 30px 15px;
+    min-height: auto;
+  }
 
-.categorySection .card {
-  width: 300px;
-  height: 350px;
-  border: 1px solid black;
-  border-style: none;
-  border-radius: 16px;
+  .containerHome {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .homeText {
+    text-align: center;
+    align-items: center;
+    order: 2;
+  }
+
+  .homeImage {
+    order: 1;
+    max-width: 80%;
+  }
+
+  .homeImage img {
+    max-height: 250px;
+  }
+
+  .info h1 {
+    font-size: 2rem;
+  }
+}
+
+
+.categorySection {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.categorySection .title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.categorySection .titleH {
+  font-size: 2rem;
+  color: #222;
+  margin: 0;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fcfbf9;
+  border: 1px solid #eee;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-
-.categorySection img {
-  width: 100%;
-  height: 270px;
-  object-fit: cover;
+  display: flex;
+  flex-direction: column;
 }
 
 .cardLink {
-  text-decoration: none;
-  color: black;
-  display: block; /* חשוב! גורם ללינק לתפוס את כל שטח הכרטיס */
-  width: 100%;
+  text-decoration: none; 
+  color: inherit;
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
-.cardContent h3 {
-  padding: 5px 10px;
+.card img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
 }
-.cardContent p {
-  padding: 5px 10px;
-}
-/* עיצוב ספציפי לכרטיס האחרון */
-.all-perfumes-card {
-  background: #8b5a8e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.cardContent {
+  padding: 20px;
   text-align: center;
-  border: none;
 }
 
-/* מוודא שהלינק והדיב הפנימי תופסים את כל הגובה כדי שהמרכוז יעבוד */
+.cardContent h3,
+.cardContent h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.cardContent p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.all-perfumes-card {
+  background-color: #111; 
+}
+
 .all-perfumes-card .cardLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+  justify-content: center; 
+  min-height: 200px;
 }
-.cardContainer .card:hover {
-  transform: translateY(-10px);
-  transition: transform 0.3s ease;
-}
+
 .all-perfumes-card .cardContent h2 {
-  color: #ffffff;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  color: #fff;
 }
 
 .all-perfumes-card .cardContent p {
-  color: rgba(255, 255, 255, 0.9);
+  color: #ccc;
 }
 
-/* אפקט Hover לכרטיס הסגול */
-.all-perfumes-card:hover {
-  background: #6b3d6b;
-  transform: translateY(-10px);
-  transition: transform 0.3s ease;
-}
-.cardContainer {
+
+.section-2-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/*
-.cardContainer {
-    gap: 20px;
-    display: grid;
-    justify-items: center;
-    grid-auto-flow: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+
+.whyUsSection {
+  padding: 50px 20px;
+  background-color: #fcfbf9; 
 }
-*/
-.title {
-  align-items: center;
-  /* margin-bottom: 40px; */
-}
-.title .titleH {
+
+.whyUsContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.whyUsCard {
+  flex: 1;
+  text-align: center;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
+  border: 1px solid #eee;
+}
+
+.whyUsIcon {
   font-size: 2rem;
-  margin-bottom: 20px;
+  color: #6b3d6b; 
+  margin-bottom: 15px;
 }
 
-/* Mobile Responsive */
+.whyUsCard h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin: 0 0 10px 0;
+}
 
-@media (max-width: 1440px) {
-  .homeText {
+.whyUsCard p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================
+   📱 התאמה מלאה למובייל (עד 600 פיקסלים)
+   ========================================== */
+@media (max-width: 600px) {
+  .whyUsSection {
+    padding: 35px 15px;
+  }
+
+  /* הפיכת שלושת הכרטיסים לטור אנכי מסודר וממורכז */
+  .whyUsContainer {
     flex-direction: column;
-    justify-content: space-evenly;
-    width: 80%;
-    height: 300px;
+    gap: 20px;
+  }
+
+  .whyUsCard {
+    padding: 25px 15px;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px; /* התאמת הצל למסך קטן */
+  }
+
+  .whyUsCard h3 {
+    font-size: 1.15rem;
+  }
+
+  .whyUsCard p {
+    font-size: 0.9rem;
+  }
+  .reviewsContainer {
     display: flex;
-  }
-  .homeText {
-    flex-direction: column;
-    justify-content: space-evenly;
-    /* width: 40%; */
-    height: 300px;
-    display: flex;
-    z-index: 8;
-  }
-  .cardContent p {
-    display: none;
-  }
-  .containerHome {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-    display: flex;
-  }
-  .homeImage img {
-    width: 500px;
+    justify-content: space-between;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+
+    /* הסתרת סקרול בר לדפדפני כרום, ספארי ואדג' (Webkit) */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* (Firefox) */
+    scrollbar-width: none;
+
+    /* הסתרת סקרול בר לדפדפני אינטרנט אקספלורר ישנים */
+    -ms-overflow-style: none;
   }
 }
-@media (max-width: 768px) {
-  section.heroSection {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    /* height: 500px; */
-  }
-  .containerHome {
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-    display: flex;
-    height: 580px;
-  }
 
-  .cardContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* שתי עמודות שוות */
-    gap: 15px;
-    padding: 15px;
-    width: 100%;
-    justify-items: center;
-  }
+.reviewsSection {
+  padding: 50px 20px;
+  background-color: #fff;
+}
 
-  .categorySection .card {
-    width: 100%;
-    max-width: 100%;
-    height: 250px; /* נותן להם להימתח לפי העמודה */
-  }
-  .homeImage {
-    /* display: flex; */
-    /* align-content: center; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    width: 300px;
+.reviewsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    z-index: -27;
-  }
-  .cardContent p {
-    display: none;
-  }
-  .cardContent h3,
-  .cardContent p {
-    padding: 5px 0;
-  }
-  .homeText {
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    /* height: 400px; */
-    display: flex;
-    gap: 15px;
-  }
-  .title .titleH {
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    display: flex;
-    margin-top: 20px;
-  }
+.reviewCard {
+  flex: 1;
+  background: #fcfbf9;
+  padding: 25px 20px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  text-align: center;
+}
 
-  .homeText h1 {
-    margin-bottom: 4px;
-    font-size: 2rem;
-  }
-  .homeImage img {
-    width: 300px;
-  }
-  header {
-    margin-bottom: 20px;
-  }
+.stars {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.reviewText {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+}
+
+.reviewerName {
+  font-size: 0.95rem;
+  color: #111;
+  margin: 0;
+  font-weight: 600;
+}
+h2.titleH {
+  text-align: center;
 }
