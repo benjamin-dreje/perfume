@@ -302,11 +302,16 @@ h2.titleH {
     padding: 10px 5px;
 
     /* הסתרת סקרול בר */
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    scroll-behavior: smooth;
+
+    /* הסתרת סרגל גלילה בדפדפני פיירפוקס ואינטרנט אקספלורר */
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  /* הסתרת סרגל גלילה בדפדפני כרום, ספארי ואדג' (CSS רגיל ללא קינון) */
+  .reviewsContainer::-webkit-scrollbar {
+    display: none;
   }
 
   .reviewCard {
