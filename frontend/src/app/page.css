@@ -96,7 +96,6 @@
   }
 }
 
-
 .categorySection {
   padding: 50px 20px;
   background-color: #fff;
@@ -131,7 +130,7 @@
 }
 
 .cardLink {
-  text-decoration: none; 
+  text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
@@ -140,7 +139,7 @@
 
 .card img {
   width: 100%;
-  height: 200px; 
+  height: 200px;
   object-fit: cover;
 }
 
@@ -163,11 +162,11 @@
 }
 
 .all-perfumes-card {
-  background-color: #111; 
+  background-color: #111;
 }
 
 .all-perfumes-card .cardLink {
-  justify-content: center; 
+  justify-content: center;
   min-height: 200px;
 }
 
@@ -179,7 +178,6 @@
   color: #ccc;
 }
 
-
 .section-2-container {
   display: flex;
   gap: 20px;
@@ -188,10 +186,9 @@
   padding: 0 20px;
 }
 
-
 .whyUsSection {
   padding: 50px 20px;
-  background-color: #fcfbf9; 
+  background-color: #fcfbf9;
 }
 
 .whyUsContainer {
@@ -202,20 +199,19 @@
   margin: 0 auto;
 }
 
-
 .whyUsCard {
   flex: 1;
   text-align: center;
   background: white;
   padding: 30px 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   border: 1px solid #eee;
 }
 
 .whyUsIcon {
   font-size: 2rem;
-  color: #6b3d6b; 
+  color: #6b3d6b;
   margin-bottom: 15px;
 }
 
@@ -230,53 +226,6 @@
   color: #666;
   line-height: 1.5;
   margin: 0;
-}
-
-/* ==========================================
-   📱 התאמה מלאה למובייל (עד 600 פיקסלים)
-   ========================================== */
-@media (max-width: 600px) {
-  .whyUsSection {
-    padding: 35px 15px;
-  }
-
-  /* הפיכת שלושת הכרטיסים לטור אנכי מסודר וממורכז */
-  .whyUsContainer {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .whyUsCard {
-    padding: 25px 15px;
-    box-shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px; /* התאמת הצל למסך קטן */
-  }
-
-  .whyUsCard h3 {
-    font-size: 1.15rem;
-  }
-
-  .whyUsCard p {
-    font-size: 0.9rem;
-  }
-  .reviewsContainer {
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow-x: auto;
-
-    /* הסתרת סקרול בר לדפדפני כרום, ספארי ואדג' (Webkit) */
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* (Firefox) */
-    scrollbar-width: none;
-
-    /* הסתרת סקרול בר לדפדפני אינטרנט אקספלורר ישנים */
-    -ms-overflow-style: none;
-  }
 }
 
 .reviewsSection {
@@ -321,4 +270,52 @@
 }
 h2.titleH {
   text-align: center;
+}
+
+/* ==========================================
+   📱 התאמה מלאה למובייל (עד 600 פיקסלים)
+   ========================================== */
+@media (max-width: 600px) {
+  .whyUsSection {
+    padding: 35px 15px;
+  }
+
+  /* הפיכת שלושת הכרטיסים לטור אנכי מסודר וממורכז */
+  .whyUsContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .whyUsCard {
+    padding: 25px 15px;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px; /* התאמת הצל למסך קטן */
+  }
+
+  .whyUsCard h3 {
+    font-size: 1.15rem;
+  }
+
+  .whyUsCard p {
+    font-size: 0.9rem;
+  }
+  .reviewsContainer {
+    display: flex;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto; /* מאפשר גלילה אופקית */
+    padding: 10px 5px; /* קצת מרחב מלמעלה ולמטה בשביל הצל */
+
+    /* הסתרת סקרול בר */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .reviewCard {
+    flex: none;
+    width: 300px;
+  }
 }
