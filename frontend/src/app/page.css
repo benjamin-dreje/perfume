@@ -272,15 +272,11 @@ h2.titleH {
   text-align: center;
 }
 
-/* ==========================================
-   📱 התאמה מלאה למובייל (עד 600 פיקסלים)
-   ========================================== */
 @media (max-width: 600px) {
   .whyUsSection {
     padding: 35px 15px;
   }
 
-  /* הפיכת שלושת הכרטיסים לטור אנכי מסודר וממורכז */
   .whyUsContainer {
     flex-direction: column;
     gap: 20px;
@@ -288,7 +284,7 @@ h2.titleH {
 
   .whyUsCard {
     padding: 25px 15px;
-    box-shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px; /* התאמת הצל למסך קטן */
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 4px 12px;
   }
 
   .whyUsCard h3 {
@@ -303,8 +299,8 @@ h2.titleH {
     gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
-    overflow-x: auto; /* מאפשר גלילה אופקית */
-    padding: 10px 5px; /* קצת מרחב מלמעלה ולמטה בשביל הצל */
+    overflow-x: auto;
+    padding: 10px 5px;
 
     /* הסתרת סקרול בר */
     &::-webkit-scrollbar {
