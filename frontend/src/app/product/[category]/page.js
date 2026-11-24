@@ -6,7 +6,7 @@ import { useCart } from "../../context/cartContext";
 import PerfumeCard from "../../components/Card/Card";
 
 const fetchPerfumes = async () => {
-  const response = await fetch("http://localhost:5000/api/perfumes/");
+  const response = await fetch("/api/perfumes/");
   if (!response.ok) {
     throw new Error("Failed to fetch perfumes");
   }
