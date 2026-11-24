@@ -21,6 +21,7 @@
 }
 
 nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,6 +115,23 @@ nav ul li a {
 .orders-link:hover {
   color: #8b5a8e;
 }
+.navToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+  font-size: 22px;
+}
+.navToggle:hover {
+  background: #f5f0f5;
+  color: #8b5a8e;
+}
 nav ul li a:hover {
   text-decoration: none;
   color: var(--foreground);
@@ -122,7 +140,61 @@ nav ul li a:hover {
   color: #8b5a8e;
 }
 @media (max-width: 768px) {
-  .navList {
+  .header nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .logo {
+    align-items: center;
+  }
+
+  .header .navList {
     display: none;
+  }
+
+  .header .navList.navListOpen {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    z-index: 20;
+  }
+
+  .header .navList .navItem a {
+    display: block;
+    padding: 12px 14px;
+    font-size: 1rem;
+  }
+
+  .userLogo .fa-user {
+    display: none;
+  }
+
+  .navToggle {
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .userLogo {
+    gap: 12px;
+  }
+
+  .orders-link span {
+    display: none;
+  }
+
+  .orders-link i {
+    font-size: 21px !important;
   }
 }
