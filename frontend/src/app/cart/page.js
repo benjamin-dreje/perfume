@@ -3,15 +3,33 @@ import { useCart } from "../context/cartContext";
 import CardComponent from "../components/Cart/Cart";
 import "../components/Cart/Cart.css";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function CartPage() {
-  const { cartItems } = useCart();
+  const { cartItems, placeOrder } = useCart();
   const [isMounted, setIsMounted] = useState(false);
- 
+  const [isOrdering, setIsOrdering] = useState(false);
+  const [orderError, setOrderError] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  const handleOrder = async () => {
+    setIsOrdering(true);
+    setOrderError("");
+
+    try {
+      await placeOrder(cartItems);
+      router.push("/orders");
+    } catch (error) {
+      setOrderError(error.message);
+    } finally {
+      setIsOrdering(false);
+    }
+  };
+
   const totalPrice = cartItems.reduce((acc, item) => {
     return acc + item.price * (item.quantity || 1);
   }, 0);
@@ -31,7 +49,9 @@ export default function CartPage() {
           <p>Loading your cart...</p>
         </div>
         <div className="cart-footer">
-          <button className="order-now-btn">Order Now →</button>
+          <button className="order-now-btn" disabled>
+            Order Now →
+          </button>
         </div>
       </div>
     );
@@ -66,7 +86,14 @@ export default function CartPage() {
           <span>Total: </span>
           <strong>${totalPrice.toFixed(2)}</strong>
         </div>
-        <button className="order-now-btn">Order Now →</button>
+        {orderError && <p className="order-error">{orderError}</p>}
+        <button
+          className="order-now-btn"
+          onClick={handleOrder}
+          disabled={isOrdering || cartItems.length === 0}
+        >
+          {isOrdering ? "Placing order..." : "Order Now →"}
+        </button>
       </div>
     </div>
   );

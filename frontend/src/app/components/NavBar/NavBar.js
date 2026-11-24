@@ -30,6 +30,10 @@ export default function NavBar() {
         </div>
 
         <div className="userLogo">
+          <Link className="orders-link" href="/orders">
+            <i className="fa-solid fa-box-open"></i>
+            <span>My Orders</span>
+          </Link>
           <Link href="/cart">
             <div className="userCart">
               <i className="fa-solid fa-cart-arrow-down"></i>

@@ -1,8 +1,23 @@
 "use client";
 
-import { useState, useContext, useEffect, createContext } from "react";
+import {
+  useState,
+  useContext,
+  useEffect,
+  useCallback,
+  createContext,
+} from "react";
 
 const CartContext = createContext();
+
+const getGuestId = () => {
+  const savedGuestId = localStorage.getItem("guestOrderId");
+  if (savedGuestId) return savedGuestId;
+
+  const guestId = window.crypto.randomUUID();
+  localStorage.setItem("guestOrderId", guestId);
+  return guestId;
+};
 
 export function CartProvider({ children }) {
   const [showNotification, setShowNotification] = useState(false);
@@ -96,11 +111,49 @@ export function CartProvider({ children }) {
     });
   };
 
+  const placeOrder = useCallback(async (items) => {
+    const response = await fetch("/api/orders/order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ guestId: getGuestId(), items }),
+    });
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || "Failed to place your order");
+    }
+
+    setCartItems([]);
+    return result.data;
+  }, []);
+
+  const fetchOrders = useCallback(async () => {
+    const guestId = getGuestId();
+    const response = await fetch(
+      `/api/orders/order/${encodeURIComponent(guestId)}`,
+    );
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || "Failed to load your orders");
+    }
+
+    return result.data;
+  }, []);
+
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <CartContext.Provider
-      value={{ cartItems, cartCount, addToCart, deleteCart, updateQuantity }}
+      value={{
+        cartItems,
+        cartCount,
+        addToCart,
+        deleteCart,
+        updateQuantity,
+        placeOrder,
+        fetchOrders,
+      }}
     >
       {children}
       {showNotification && (

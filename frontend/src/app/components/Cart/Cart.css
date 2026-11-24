@@ -68,6 +68,14 @@ p.sizeSelected {
   cursor: pointer;
   margin-top: 20px;
 }
+.order-now-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.order-error {
+  margin-top: 12px;
+  color: #9c3f3f;
+}
 .remove-btn {
   background: #9c3f3f81;
   border: none;

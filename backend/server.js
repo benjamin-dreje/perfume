@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import configureGlobalMiddlewares from "./middlewares/globalMiddlewares.js";
 import perfumeRoutes from "./router/perfumeRouter.js";
+import orderRoutes from "./router/orderRouter.js";
 import { userRoutes } from "./router/userRouter.js";
 
 // load dotenv file
@@ -14,6 +15,7 @@ const PORT = process.env.PORT || 5000;
 configureGlobalMiddlewares(app);
 
 app.use("/api/perfumes", perfumeRoutes); //api/perfumes to all routes in perfumeRoutes
+app.use("/api/orders", orderRoutes);
 app.use("/api/users", userRoutes); //api/users to all routes in userRoutes
 //middleWares
 

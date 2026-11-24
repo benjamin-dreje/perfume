@@ -92,6 +92,20 @@ nav ul li a {
   gap: 20px;
   align-items: center;
 }
+.orders-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--foreground);
+  font-weight: 500;
+  text-decoration: none;
+}
+.orders-link i {
+  font-size: 18px !important;
+}
+.orders-link:hover {
+  color: #8b5a8e;
+}
 nav ul li a:hover {
   text-decoration: none;
   color: var(--foreground);
