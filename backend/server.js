@@ -17,6 +17,8 @@ app.use("/api/perfumes", perfumeRoutes); //api/perfumes to all routes in perfume
 app.use("/api/users", userRoutes); //api/users to all routes in userRoutes
 //middleWares
 
+//check
+
 //Url validation
 app.use((req, res) => {
   res.status(404).json({
