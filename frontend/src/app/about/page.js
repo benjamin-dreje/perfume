@@ -1,29 +1,59 @@
+import "./about.css";
+
+const HIGHLIGHTS = [
+  {
+    title: "Balanced Fragrance Notes",
+    description:
+      "Thoughtfully layered top, heart, and base notes crafted to evolve naturally on the skin.",
+  },
+  {
+    title: "Lasting Presence",
+    description:
+      "Refined formulations available in multiple bottle sizes for everyday wear, work, and evening occasions.",
+  },
+  {
+    title: "Seamless Shopping Experience",
+    description:
+      "Clear comparison of scent profiles, sizes, and pricing with smooth cart management from any device.",
+  },
+];
 
 export default function AboutPage() {
   return (
-    <main style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-      <h1>אודותינו</h1>
-      <p>
-        ברוכים הבאים לדף האודות! כאן תוכלו לספר על הפרויקט שלכם, 
-        על המטרות שלו ועל הצוות שמאחוריו.
-      </p>
-      
-      <section style={{ marginTop: '2rem' }}>
-        <h2>החזון שלנו</h2>
-        <p>
-          אנחנו שואפים לבנות אפליקציות ווב מודרניות ומהירות בעזרת Next.js,
-          תוך דגש על חווית משתמש מעולה וקוד נקי.
+    <main className="about-page">
+      <header className="about-hero">
+        <span className="about-eyebrow">THE ART OF SCENT</span>
+        <h1>About Our Collection</h1>
+        <p className="about-lead">
+          We believe a great fragrance is a personal signature that captures
+          moods, moments, and memories. Our curated collection brings together
+          fresh, woody, citrus, and aromatic scents in one refined destination.
         </p>
-      </section>
+      </header>
 
-      <section style={{ marginTop: '2rem' }}>
-        <h3>מה תמצאו כאן?</h3>
-        <ul>
-          <li>חדשנות טכנולוגית</li>
-          <li>ביצועים ללא פשרות</li>
-          <li>ממשק משתמש אינטואיטיבי</li>
-        </ul>
-      </section>
+      <div className="about-grid">
+        <section className="about-card" aria-labelledby="vision-heading">
+          <h2 id="vision-heading">Our Approach to Fragrance</h2>
+          <p>
+            Every perfume in our catalog is selected with versatility and
+            character in mind—from crisp, effortless daily scents to deeper,
+            more expressive compositions. Our goal is to make discovering your
+            next signature fragrance simple, transparent, and enjoyable.
+          </p>
+        </section>
+
+        <section className="about-card" aria-labelledby="highlights-heading">
+          <h2 id="highlights-heading">What Defines Our Store</h2>
+          <ul className="about-list">
+            {HIGHLIGHTS.map((item) => (
+              <li key={item.title}>
+                <strong>{item.title}</strong>
+                <span>{item.description}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
     </main>
   );
 }
