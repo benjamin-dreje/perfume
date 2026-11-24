@@ -33,6 +33,14 @@ nav {
   align-content: center;
   color: #6b3d6b;
 }
+.logo-link {
+  color: inherit;
+  text-decoration: none;
+}
+.logo-text {
+  color: inherit;
+}
+
 nav ul {
   gap: 1.5rem;
   list-style: none;

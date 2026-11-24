@@ -54,7 +54,8 @@
   margin-bottom: 25px;
 }
 
-.homeBtns button {
+.homeBtns .shopNowButton {
+  display: inline-block;
   background-color: #6b3d6b;
   color: #fff;
   border: none;
@@ -63,6 +64,7 @@
   cursor: pointer;
   border-radius: 4px;
   width: fit-content;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

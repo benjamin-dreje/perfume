@@ -14,7 +14,9 @@ export default function NavBar() {
     <header className="header">
       <nav>
         <div className="logo">
-          <h1>Perfume</h1>
+          <Link href="/" className="logo-link">
+            <h1 className="logo-text">Perfume</h1>
+          </Link>
 
           <ul className="navList">
             <li className="navItem">

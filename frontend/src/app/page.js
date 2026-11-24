@@ -19,7 +19,9 @@ export default function Home() {
               </p>
             </div>
             <div className="homeBtns">
-              <button>Shop Now</button>
+              <Link href="/product/all" className="shopNowButton">
+                Shop Now
+              </Link>
             </div>
           </div>
         </div>
