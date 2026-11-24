@@ -21,6 +21,7 @@ export function CartProvider({ children }) {
       return [];
     }
   });
+
   useEffect(() => {
     localStorage.setItem("cartItem", JSON.stringify(cartItems));
     console.log(cartItems);
@@ -38,48 +39,66 @@ export function CartProvider({ children }) {
   const updateQuantity = (id, size, newQuantity) => {
     if (newQuantity < 1) return;
 
-    setCartItems((prevCart) =>
-      prevCart.map((item) =>
-        // בדיקה כפולה: גם ה-ID וגם המידה חייבים להתאים
-        item.id === id && item.selectedSize === size
-          ? { ...item, quantity: newQuantity }
-          : item,
-      ),
-    );
+    setCartItems((prevCart) => {
+      return prevCart.map((item) => {
+        const itemId = item.id || item._id;
+        if (itemId === id && item.selectedSize === size) {
+          return { ...item, quantity: newQuantity };
+        } else {
+          return item;
+        }
+      });
+    });
   };
 
   const addToCart = (product, customQuantity = 1) => {
+    const productId = product.id || product._id;
+
     setCartItems((prev) => {
-      const exists = prev.find(
-        (item) =>
-          item.id === product.id && item.selectedSize === product.selectedSize,
-      );
+      const exists = prev.find((item) => {
+        const itemId = item.id || item._id;
+        return (
+          itemId === productId && item.selectedSize === product.selectedSize
+        );
+      });
 
       if (exists) {
-        return prev.map((item) =>
-          item.id === product.id && item.selectedSize === product.selectedSize
-            ? { ...item, quantity: item.quantity + customQuantity }
-            : item,
-        );
+        return prev.map((item) => {
+          const itemId = item.id || item._id;
+          if (
+            itemId === productId &&
+            item.selectedSize === product.selectedSize
+          ) {
+            return { ...item, quantity: item.quantity + customQuantity };
+          } else {
+            return item;
+          }
+        });
+      } else {
+        return [
+          ...prev,
+          { ...product, id: productId, quantity: customQuantity },
+        ];
       }
-      return [...prev, { ...product, quantity: customQuantity }];
     });
+
     setShowNotification(true);
   };
 
   const deleteCart = (productId, selectedSize) => {
-    setCartItems((prev) =>
-      prev.filter(
-        (item) =>
-          !(item.id === productId && item.selectedSize === selectedSize),
-      ),
-    );
+    setCartItems((prev) => {
+      return prev.filter((item) => {
+        const itemId = item.id || item._id;
+        const isSameItem =
+          itemId === productId && item.selectedSize === selectedSize;
+        return !isSameItem;
+      });
+    });
   };
 
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
-  console.log(cartItems);
+
   return (
-    // אנחנו מעבירים גם את ה-cartItems (לדף העגלה) וגם את ה-cartCount (לנאבר)
     <CartContext.Provider
       value={{ cartItems, cartCount, addToCart, deleteCart, updateQuantity }}
     >
