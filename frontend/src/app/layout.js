@@ -17,9 +17,11 @@ export default function RootLayout({ children }) {
       <body className={poppins.className}>
         <QueryProvider>
           <CartProvider>
-            <NavBar />
-            {children}
-            <Footer />
+           <div className="app-container">
+              <NavBar />
+              <div className="main-content">{children}</div>
+              <Footer />
+            </div>
           </CartProvider>
         </QueryProvider>
       </body>

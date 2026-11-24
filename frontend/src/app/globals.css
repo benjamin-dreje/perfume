@@ -9,6 +9,17 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
 /* מבטיח שהאייקונים ישתמשו בפונט הנכון של Font Awesome */
 .fa-solid,
 .fa-brands,
