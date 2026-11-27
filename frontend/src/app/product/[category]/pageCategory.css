@@ -49,15 +49,10 @@ button.btn:hover {
   background-color: #6b3d6b;
   color: white;
 }
-.filterIcon {
-  background-color: #f1f1f1;
-  padding: 6px;
-  border-radius: 10px;
-}
+
 
 .filterIcon:hover {
   cursor: pointer;
-  background-color: #e4e2e2;
 }
 .filterContainer {
   align-items: center;

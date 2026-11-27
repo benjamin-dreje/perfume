@@ -112,14 +112,14 @@ export default function CategoryPage({ params }) {
           <p>result : {filteredPerfumes.length}</p>
         </div>
         <div className="filterIcon">
-          <label htmlFor="priceSort">Sort by price </label>
+         
           <select
             className="priceSortSelect"
             id="priceSort"
             value={priceSort}
             onChange={(event) => setPriceSort(event.target.value)}
           >
-            <option value="">Default</option>
+           
             <option value="asc">Lowest to highest</option>
             <option value="desc">Highest to lowest</option>
           </select>
