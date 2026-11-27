@@ -43,11 +43,21 @@
   color: #333;
 }
 
-.cardInfo .info {
-  color: #666;
-  font-size: 0.9rem;
+.cardScentTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-bottom: 12px;
-  line-height: 1.4;
+}
+
+.cardScentTag {
+  padding: 4px 7px;
+  border: 1px solid #e5dbe6;
+  border-radius: 12px;
+  color: #6b3d6b;
+  background-color: #f8f4f8;
+  font-size: 0.75rem;
+  line-height: 1.2;
 }
 
 .cardInfo .price {
@@ -92,4 +102,37 @@
 
 .details:hover {
   background-color: #e0e0e0;
+}
+
+@media (max-width: 480px) {
+  .cardInfo {
+    padding: 12px 10px;
+  }
+
+  .cardInfo .title {
+    font-size: 1rem;
+  }
+
+  .cardScentTags {
+    gap: 5px;
+  }
+
+  .cardScentTag {
+    padding: 3px 6px;
+    font-size: 0.68rem;
+  }
+
+  .cardInfo .price {
+    font-size: 1rem;
+  }
+
+  .cardButton {
+    padding: 0 10px 12px;
+  }
+
+  .add,
+  .details {
+    padding: 8px 6px;
+    font-size: 0.8rem;
+  }
 }

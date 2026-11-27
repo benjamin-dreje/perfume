@@ -145,8 +145,24 @@ i.fa-solid.fa-spray-can-sparkles {
 
   .infoWrapper {
     width: 100%;
-
     gap: 15px;
+  }
+
+  h1.titleInfo {
+    font-size: 1.5rem;
+  }
+
+  .rating,
+  .infoInfo,
+  p.detailedInfo,
+  .performance p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .sizeSelection h4,
+  .scentTags h4 {
+    font-size: 1rem;
   }
 
   .sizeButtons {
@@ -154,12 +170,29 @@ i.fa-solid.fa-spray-can-sparkles {
     flex-wrap: wrap;
   }
 
+  .sizeButtons button {
+    font-size: 0.85rem;
+  }
+
   .scentTags {
-    /* flex-wrap: wrap; */
-    justify-content: center;
-    gap: 10px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+  }
+
+  span.tag {
+    margin-right: 0;
+    padding: 3px 6px;
+    font-size: 0.75rem;
+  }
+
+  .priceInfo {
+    font-size: 1.2rem;
+  }
+
+  .countPrice {
+    font-size: 0.9rem;
   }
 
   .priceAndTotal {
@@ -176,5 +209,17 @@ i.fa-solid.fa-spray-can-sparkles {
     width: 100%;
     height: 45px;
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1.titleInfo {
+    font-size: 1.35rem;
+  }
+
+  .infoInfo,
+  p.detailedInfo,
+  .performance p {
+    font-size: 0.85rem;
   }
 }

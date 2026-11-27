@@ -96,6 +96,26 @@ i.fa-solid.fa-filter {
   }
 
   .pageWrapper {
-    padding: 12px; /* פדינג קטן יותר שמתאים לטלפון צר */
+    padding: 12px;
+  }
+
+  h1.pageTitle {
+    font-size: 1.25rem;
+  }
+
+  .containerBtns {
+    gap: 6px;
+  }
+
+  button.btn {
+    width: auto;
+    flex: 1;
+    padding: 8px 4px;
+    font-size: 0.8rem;
+  }
+
+  .resultFilter,
+  .filterIcon {
+    font-size: 0.8rem;
   }
 }

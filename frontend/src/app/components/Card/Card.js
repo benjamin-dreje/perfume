@@ -3,7 +3,8 @@ import "./card.css";
 import { useCart } from "../../context/cartContext"; // וודא שהנתיב נכון
 
 export default function Card({ perfume }) {
-  const { title, info, price, image } = perfume;
+  const { title, price, image } = perfume;
+  const scentTags = Array.isArray(perfume.scent) ? perfume.scent.slice(0, 4) : [];
   const { addToCart } = useCart();
   const handleAddToCart = () => {
     const productWithDefaults = {
@@ -22,7 +23,15 @@ export default function Card({ perfume }) {
 
       <div className="cardInfo">
         <h3 className="title">{title}</h3>
-        <p className="info">{info}</p>
+        {scentTags.length > 0 && (
+          <div className="cardScentTags" aria-label="Scent notes">
+            {scentTags.map((scent, index) => (
+              <span className="cardScentTag" key={`${scent}-${index}`}>
+                {scent}
+              </span>
+            ))}
+          </div>
+        )}
         <div className="price">${price}</div>
       </div>
 
