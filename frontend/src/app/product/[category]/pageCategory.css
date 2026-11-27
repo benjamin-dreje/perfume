@@ -77,7 +77,102 @@ button.btn:hover {
 i.fa-solid.fa-filter {
   margin-left: 10px;
 }
+/* עיצוב בסיסי + תאימות לכל הדפדפנים */
+.priceSortSelect {
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  color: #1f1b24;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.6rem 2.4rem 0.6rem 1rem;
+  border: 1px solid rgba(139, 90, 142, 0.35);
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 
+  /* חץ מותאם לדפדפנים שלא תומכים ב-base-select */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b3d6b' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  background-size: 16px;
+}
+
+.priceSortSelect:hover {
+  border-color: #8b5a8e;
+  background-color: #ffffff;
+}
+
+.priceSortSelect:focus-visible {
+  border-color: #6b3d6b;
+  box-shadow: 0 0 0 3px rgba(139, 90, 142, 0.2);
+}
+
+/* שדרוג אוטומטי לדפדפנים שתומכים ב-base-select החדש */
+@supports (appearance: base-select) {
+  .priceSortSelect,
+  .priceSortSelect::picker(select) {
+    appearance: base-select;
+  }
+
+  .priceSortSelect {
+    background-image: none; /* הדפדפן מספק חץ מובנה נקי */
+    padding-right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .priceSortSelect::picker-icon {
+    color: #6b3d6b;
+    transition: transform 0.2s ease;
+  }
+
+  .priceSortSelect:open::picker-icon {
+    transform: rotate(180deg);
+  }
+
+  .priceSortSelect::picker(select) {
+    margin-top: 0.35rem;
+    padding: 0.35rem;
+    border-radius: 14px;
+    border: 1px solid rgba(139, 90, 142, 0.25);
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 28px rgba(31, 27, 36, 0.14);
+  }
+
+  .priceSortSelect option {
+    padding: 0.55rem 0.85rem;
+    border-radius: 8px;
+    color: #1f1b24;
+    cursor: pointer;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  .priceSortSelect option:hover {
+    background-color: rgba(139, 90, 142, 0.12);
+    color: #6b3d6b;
+  }
+
+  .priceSortSelect option:checked {
+    background-color: rgba(139, 90, 142, 0.18);
+    color: #6b3d6b;
+    font-weight: 600;
+  }
+
+  .priceSortSelect option::checkmark {
+    color: #6b3d6b;
+    font-weight: 700;
+  }
+}
 @media (max-width: 1024px) {
   .grid4 {
     grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -64,13 +64,15 @@ export default function NavBar() {
               )}
             </div>
           </Link>
-          <i className="fa-solid fa-user"></i>
+          {/* <i className="fa-solid fa-user"></i> */}
         </div>
 
         <button
           type="button"
           className="navToggle"
-          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={isMenuOpen}
           aria-controls="primary-navigation"
           onClick={() => setIsMenuOpen((isOpen) => !isOpen)}

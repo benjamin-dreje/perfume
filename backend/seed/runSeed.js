@@ -75,8 +75,7 @@ const rawPerfumesFromFrontend = [
     id: 4,
     title: "Giorgio Armani Acqua di Gio",
     category: "Men",
-    image:
-      "https://www.armanibeauty.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-armani-master-catalog/default/dw9e7f4c5a/products/A001/A001_3605520551104_1.jpg",
+    image: "/gio.jpg",
     info: "A fresh marine scent inspired by the Mediterranean Sea. Light and pleasant.",
     info2:
       "A legendary scent that captures the essence of the ocean. This aquatic, hyacinth-scented fragrance opens with a splash of fresh, calabrian bergamot, neroli and green tangerine.",
@@ -95,8 +94,7 @@ const rawPerfumesFromFrontend = [
     id: 5,
     title: "Jean Paul Gaultier Le Male",
     category: "Men",
-    image:
-      "https://www.jeanpaulgaultier.com/dw/image/v2/BDCH_PRD/on/demandware.static/-/Sites-jpg-master-catalog/default/dw7e5a6f2b/images/perfumes/LE-MALE/LE-MALE-EDT-125ML.jpg",
+    image: "/jean.jpg",
     info: "An oriental fragrance with Lavender and Vanilla in the iconic bottle.",
     info2:
       "Intensive and sensible, modern, and comfortably warm. Le Male is a magnetically attractive fragrance which seduces with its uniqueness; it is built on contrasts.",
@@ -113,7 +111,7 @@ const rawPerfumesFromFrontend = [
   },
   {
     id: 6,
-    title: "Terre d'Hermès",
+    title: "Terre.jpg",
     category: "Men",
     image:
       "https://www.hermes.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-hermes-master-catalog/default/dw5b4c1f9a/product/fragrance/terre-d-hermes-eau-de-toilette/01.jpg",
@@ -137,8 +135,7 @@ const rawPerfumesFromFrontend = [
     id: 7,
     title: "Chanel Coco Mademoiselle",
     category: "Women",
-    image:
-      "https://www.chanel.com/images/t_one/t_fragrance//q_auto,f_auto,fl_lossy,dpr_2/coco-mademoiselle-eau-de-parfum-spray-100ml.jpg",
+    image: "/coco.jpg",
     info: "A floral and oriental scent combining Orange, Jasmine, and Rose.",
     info2:
       "Irresistibly sexy, irrepressibly spirited. A sparkling, bold floral-woody fragrance that recalls a daring young Coco Chanel. A modern composition with a strong character.",
@@ -157,8 +154,7 @@ const rawPerfumesFromFrontend = [
     id: 8,
     title: "YSL Libre",
     category: "Women",
-    image:
-      "https://www.yslbeauty.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-ysl-master-catalog/default/dw4f1b3e5a/products/3614272648418/3614272648418_1.jpg",
+    image: "/YSL.jpg",
     info: "A bold combination of Lavender from France and Orange Blossom from Morocco.",
     info2:
       "The fragrance of freedom. A grand floral Eau de Parfum with an unequivocal YSL twist. The burning sensuality of orange blossom twisted with aromatic lavender.",
@@ -177,8 +173,7 @@ const rawPerfumesFromFrontend = [
     id: 9,
     title: "Dior J'adore",
     category: "Women",
-    image:
-      "https://www.dior.com/dw/image/v2/BBDM_PRD/on/demandware.static/-/Sites-master_dior/default/dw15053421/assets/Y0066227/Y0066227_E01.jpg",
+    image: "/dior3.jpg",
     info: "A rich floral bouquet blending Jasmine, Rose, and Ylang-Ylang.",
     info2:
       "J'adore is an extraordinary fragrance, because it succeeds in being effortlessly seductive while boasting an original signature. A composition that unites contrasts.",
@@ -197,8 +192,7 @@ const rawPerfumesFromFrontend = [
     id: 10,
     title: "Lancôme La Vie Est Belle",
     category: "Women",
-    image:
-      "https://www.lancome.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-lancome-master-catalog/default/dw9e7f4c5a/products/A001/A001_3605532612690_1.jpg",
+    image: "/Lancome.jpg",
     info: "A sweet fragrance featuring Iris, Jasmine, and Patchouli.",
     info2:
       "La Vie Est Belle, a French expression meaning 'Life is Beautiful'. A fragrance with a powerful trail, with a perfect balance between the nobility of Iris and depth of Patchouli.",
@@ -235,10 +229,9 @@ const rawPerfumesFromFrontend = [
   },
   {
     id: 12,
-    title: "Gucci Flora",
+    title: "Gucci Bloom",
     category: "Women",
-    image:
-      "https://www.gucci.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-gucci-master-catalog/default/dw5b4c1f9a/product/fragrance/gucci-flora-gorgeous-gardenia-100ml/01.jpg",
+    image: "/bloom.jpg",
     info: "A delicate floral scent based on Gardenia and Pear Blossom.",
     info2:
       "Escape into a joy-filled fantasy land with Gucci Flora. Evolving into a new delicious Eau de Parfum, floral yet delicately sweet, Gorgeous Gardenia is built around the Gardenia flower.",
@@ -257,10 +250,9 @@ const rawPerfumesFromFrontend = [
   // --- Unisex ---
   {
     id: 13,
-    title: "Creed Aventus",
+    title: "Creed Irish",
     category: "Unisex",
-    image:
-      "https://www.creedfragrance.com/dw/image/v2/BDCH_PRD/on/demandware.static/-/Sites-creed-master-catalog/default/dw7e5a6f2b/images/fragrance/AVENTUS/AVENTUS-100ML.jpg",
+    image: "/creed.jpg",
     info: "A luxury perfume with notes of Pineapple, Bergamot, and Musk.",
     info2:
       "The exceptional Aventus celebrates strength, power and success. Inspired by the dramatic life of a historic emperor, it has become the most successful fragrance in Creed history.",
@@ -297,10 +289,9 @@ const rawPerfumesFromFrontend = [
   },
   {
     id: 15,
-    title: "Tom Ford Black Orchid",
+    title: "Tom Ford",
     category: "Unisex",
-    image:
-      "https://www.tomford.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-tomford-master-catalog/default/dw5b4c1f9a/product/fragrance/black-orchid-eau-de-parfum/01.jpg",
+    image: "/tomford.jpg",
     info: "A dark and mysterious scent of Black Orchid and rich spices.",
     info2:
       "A luxurious and sensual fragrance of rich, dark accords and an alluring potion of black orchids and spice. Modern and timeless.",
@@ -317,10 +308,9 @@ const rawPerfumesFromFrontend = [
   },
   {
     id: 16,
-    title: "Byredo Gypsy Water",
+    title: "Byredo",
     category: "Unisex",
-    image:
-      "https://www.byredo.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-byredo-master-catalog/default/dw5b4c1f9a/product/fragrance/gypsy-water-eau-de-parfum/01.jpg",
+    image: "/Byredo.jpg",
     info: "A bohemian fragrance combining Lemon, Pepper, and Juniper Berries.",
     info2:
       "Gypsy Water is an ode to the beauty of Romany culture, its unique customs and intimate beliefs. A dream of a free lifestyle close to nature.",
@@ -339,8 +329,7 @@ const rawPerfumesFromFrontend = [
     id: 17,
     title: "Le Labo Santal 33",
     category: "Unisex",
-    image:
-      "https://www.lelabofragrances.com/dw/image/v2/BDRD_PRD/on/demandware.static/-/Sites-lelabo-master-catalog/default/dw5b4c1f9a/product/fragrance/santal-33-eau-de-parfum/01.jpg",
+    image: "/lala.jpg",
     info: "A woody and rugged scent of Sandalwood, Leather, and Violet.",
     info2:
       "A perfume that touches the sensual universality of this myth. An open fire, the soft drift of smoke, where sensuality rises after the light has gone.",

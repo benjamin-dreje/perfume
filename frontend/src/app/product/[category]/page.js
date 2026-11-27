@@ -16,6 +16,7 @@ const fetchPerfumes = async () => {
 export default function CategoryPage({ params }) {
   const { category } = use(params);
   const [selectedCategory, setSelectedCategory] = useState(category || "all");
+  const [priceSort, setPriceSort] = useState("");
 
   const {
     data: perfumes = [], // ברירת מחדל מערך ריק בזמן טעינה
@@ -36,6 +37,12 @@ export default function CategoryPage({ params }) {
             p.category?.toLowerCase().trim() ===
             selectedCategory.toLowerCase().trim(),
         );
+
+  const sortedPerfumes = [...filteredPerfumes].sort((a, b) => {
+    if (priceSort === "asc") return Number(a.price) - Number(b.price);
+    if (priceSort === "desc") return Number(b.price) - Number(a.price);
+    return 0;
+  });
 
   const title =
     selectedCategory.toLowerCase() === "all"
@@ -105,15 +112,23 @@ export default function CategoryPage({ params }) {
           <p>result : {filteredPerfumes.length}</p>
         </div>
         <div className="filterIcon">
-          <p>
-            filter <i className="fa-solid fa-filter"></i>
-          </p>
+          <label htmlFor="priceSort">Sort by price </label>
+          <select
+            className="priceSortSelect"
+            id="priceSort"
+            value={priceSort}
+            onChange={(event) => setPriceSort(event.target.value)}
+          >
+            <option value="">Default</option>
+            <option value="asc">Lowest to highest</option>
+            <option value="desc">Highest to lowest</option>
+          </select>
         </div>
       </div>
 
       <div className="grid4">
-        {filteredPerfumes.length > 0 ? (
-          filteredPerfumes.map((perfume) => (
+        {sortedPerfumes.length > 0 ? (
+          sortedPerfumes.map((perfume) => (
             <PerfumeCard key={perfume._id} perfume={perfume} />
           ))
         ) : (
