@@ -195,6 +195,19 @@ nav ul li a:hover {
   }
 
   .orders-link i {
-    font-size: 21px !important;
+    font-size: 18px !important;
+  }
+  .userLogo i,
+  .userLogo svg {
+    font-size: 20px !important;
+    color: #333 !important;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+  }
+  h1.logo-text {
+    font-size: large;
   }
 }

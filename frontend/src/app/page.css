@@ -79,7 +79,7 @@
   }
 
   .homeText {
-    text-align: center;
+    /* text-align: center; */
     align-items: center;
     order: 2;
   }
@@ -123,8 +123,6 @@
 }
 
 .card {
-  background: #fcfbf9;
-  border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -244,12 +242,12 @@
 }
 
 .reviewCard {
-  flex: 1;
-  background: #fcfbf9;
-  padding: 25px 20px;
-  border-radius: 12px;
-  border: 1px solid #eee;
   text-align: center;
+  background: #fcfbf9;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  flex: 1;
+  padding: 25px 20px;
 }
 
 .stars {
@@ -265,9 +263,9 @@
 }
 
 .reviewerName {
-  font-size: 0.95rem;
-  color: #111;
+  color: #6b3d6b;
   margin: 0;
+  font-size: 0.95rem;
   font-weight: 600;
 }
 h2.titleH {
