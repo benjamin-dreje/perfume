@@ -17,8 +17,9 @@ export default function Card({ perfume }) {
     addToCart(productWithDefaults, 1);
   };
   return (
-    <Link className="linkCard" href={`/products/${perfume._id}`}>
-      <div className="card">
+    // <Link className="linkCard" href={`/products/${perfume._id}`}>
+    <div className="card">
+      <Link className="linkCard" href={`/products/${perfume._id}`}>
         {/* עטיפה לתמונה כדי לשמור על גובה קבוע */}
         <div className="imageWrapper">
           <img className="image" src={image} alt={title ?? "Card image"} />
@@ -35,20 +36,21 @@ export default function Card({ perfume }) {
               ))}
             </div>
           )}
+
           <div className="price">${price}</div>
         </div>
-
-        <div className="cardButton">
-          <button type="button" onClick={handleAddToCart} className="add">
-            Add <i className="fa-solid fa-cart-arrow-down"></i>
-          </button>
-          {/* <Link href={`/products/${perfume._id}`}> */}
-          <button type="button" className="details">
-            Details
-          </button>
-          {/* </Link> */}
-        </div>
+      </Link>
+      <div className="cardButton">
+        <button type="button" onClick={handleAddToCart} className="add">
+          Add <i className="fa-solid fa-cart-arrow-down"></i>
+        </button>
+        {/* <Link href={`/products/${perfume._id}`}> */}
+        <button type="button" className="details">
+          Details
+        </button>
+        {/* </Link> */}
       </div>
-    </Link>
+    </div>
+    // </Link>
   );
 }
