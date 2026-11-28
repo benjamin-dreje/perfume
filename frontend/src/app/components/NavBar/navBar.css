@@ -188,6 +188,7 @@ nav ul li a:hover {
 @media (max-width: 420px) {
   .userLogo {
     gap: 12px;
+    margin-right: -100px;
   }
 
   .orders-link span {
