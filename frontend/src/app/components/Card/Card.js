@@ -4,7 +4,9 @@ import { useCart } from "../../context/cartContext"; // וודא שהנתיב נ
 
 export default function Card({ perfume }) {
   const { title, price, image } = perfume;
-  const scentTags = Array.isArray(perfume.scent) ? perfume.scent.slice(0, 4) : [];
+  const scentTags = Array.isArray(perfume.scent)
+    ? perfume.scent.slice(0, 4)
+    : [];
   const { addToCart } = useCart();
   const handleAddToCart = () => {
     const productWithDefaults = {
@@ -15,36 +17,38 @@ export default function Card({ perfume }) {
     addToCart(productWithDefaults, 1);
   };
   return (
-    <div className="card">
-      {/* עטיפה לתמונה כדי לשמור על גובה קבוע */}
-      <div className="imageWrapper">
-        <img className="image" src={image} alt={title ?? "Card image"} />
-      </div>
+    <Link className="linkCard" href={`/products/${perfume._id}`}>
+      <div className="card">
+        {/* עטיפה לתמונה כדי לשמור על גובה קבוע */}
+        <div className="imageWrapper">
+          <img className="image" src={image} alt={title ?? "Card image"} />
+        </div>
 
-      <div className="cardInfo">
-        <h3 className="title">{title}</h3>
-        {scentTags.length > 0 && (
-          <div className="cardScentTags" aria-label="Scent notes">
-            {scentTags.map((scent, index) => (
-              <span className="cardScentTag" key={`${scent}-${index}`}>
-                {scent}
-              </span>
-            ))}
-          </div>
-        )}
-        <div className="price">${price}</div>
-      </div>
+        <div className="cardInfo">
+          <h3 className="title">{title}</h3>
+          {scentTags.length > 0 && (
+            <div className="cardScentTags" aria-label="Scent notes">
+              {scentTags.map((scent, index) => (
+                <span className="cardScentTag" key={`${scent}-${index}`}>
+                  {scent}
+                </span>
+              ))}
+            </div>
+          )}
+          <div className="price">${price}</div>
+        </div>
 
-      <div className="cardButton">
-        <button type="button" onClick={handleAddToCart} className="add">
-          Add <i className="fa-solid fa-cart-arrow-down"></i>
-        </button>
-        <Link href={`/products/${perfume._id}`}>
+        <div className="cardButton">
+          <button type="button" onClick={handleAddToCart} className="add">
+            Add <i className="fa-solid fa-cart-arrow-down"></i>
+          </button>
+          {/* <Link href={`/products/${perfume._id}`}> */}
           <button type="button" className="details">
             Details
           </button>
-        </Link>
+          {/* </Link> */}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }

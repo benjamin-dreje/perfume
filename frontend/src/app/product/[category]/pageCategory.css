@@ -9,7 +9,6 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
   width: 100%;
-  justify-items: center;
   /* align-items: stretch; */
   justify-content: center;
 }
@@ -49,7 +48,6 @@ button.btn:hover {
   background-color: #6b3d6b;
   color: white;
 }
-
 
 .filterIcon:hover {
   cursor: pointer;
@@ -183,6 +181,9 @@ i.fa-solid.fa-filter {
 @media (max-width: 480px) {
   .grid4 {
     grid-template-columns: 1fr 1fr;
+  }
+  button.details {
+    display: none;
   }
 
   .pageWrapper {

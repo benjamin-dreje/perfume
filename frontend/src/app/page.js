@@ -7,7 +7,7 @@ export default function Home() {
       <section className="heroSection">
         <div className="containerHome">
           <div className="homeImage">
-            <img src="/perfumehero111.jpg" alt="Perfume" />
+            <img src="/hero05.jpg" alt="Perfume" />
           </div>
           <div className="homeText">
             <div className="info">
