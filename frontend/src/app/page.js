@@ -29,6 +29,7 @@ export default function Home() {
 
       <section className="categorySection">
         <div className="title">
+          <p className="likeWe">We love what we do</p>
           <h2 className="titleH">Explore Our Categories</h2>
         </div>
         <div className="cardContainer">

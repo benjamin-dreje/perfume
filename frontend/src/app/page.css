@@ -113,6 +113,10 @@
   text-align: center;
   margin-bottom: 30px;
 }
+p.likeWe {
+  color: #6b3d6b;
+  font-weight: bold;
+}
 
 .cardContainer {
   display: grid;
@@ -244,7 +248,7 @@
 
 .reviewCard {
   text-align: center;
-  background: #fcfbf9;
+  background: #efefef94;
   border: 1px solid #eee;
   border-radius: 12px;
   flex: 1;
